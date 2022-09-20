@@ -1,2 +1,15 @@
-Please add your name here as a header then indent and add all your requirements for this problem.
-
+Calen Cummings
+  Should show a ball moving on the screen
+  Should allow the user to draw shapes
+  Must have the ball bounce off of the screen edges
+  Must have the ball bounce off of any user-drawn shapes
+  Must have user shapes disappear after ball bounces off
+  May have user shapes remain in place after drawing
+  Must be able to determine drawn shape size
+  Must make ball bounce if the drawn shape is big enough (> 3px)
+  Should have the ball move at a constant speed
+  May have ball change colors when it bounces
+  Should be easy to look at (accessibility)
+  Must work with any size screen (compatibility/portability)
+  Must only allow users to draw closed shapes
+  May have screen change colors when ball hits an edge
