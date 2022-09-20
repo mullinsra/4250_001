@@ -1,6 +1,14 @@
 Please add your name here as a header then indent and add all your requirements for this problem.
 
 
+Aisara Imangaliyeva 
+
+  Must have driver.
+  Driver should use standard car.
+  Driver must get from Millenium Center parking to the McDonalds by the Johnson City Mall.
+
+=======
+
 Windham
   Requirements to drive from the millennium center to JC mall Mcdonalds
 
@@ -23,3 +31,5 @@ Windham
   Other requirements
   There must be a functioning GPS that the driver is familiar with in case of road closures or detours.
   The driver must be informed what the destination looks like whether by understanding the Mcdonalds logo or by seeing a picture of that specific McDonalds from the vantage point of his approach.
+
+
