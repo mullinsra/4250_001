@@ -1,2 +1,17 @@
-Please add your name here as a header then indent and add all your requirements for this problem.
+Philip Gaver
+
+Mandatory
+1.Must be a ball.
+2.Must be able to draw obstacles with mouse.
+3.Must be able to collide with obstacles atleast 3 pixels in size.
+4.Must be able to bounce off of the screen.
+
+
+
+Optional
+1.May change the size of the ball.
+2.May have a stop and start button.
+3.May erase obstacles.
+4.May reset program.
+5.May have start/stop/pause button
 
