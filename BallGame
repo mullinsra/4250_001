@@ -1,5 +1,16 @@
 Please add your name here as a header then indent and add all your requirements for this problem.
 
+
+
+Joshua Thomas
+Must have ball object
+Ball Must constantly move accross screen
+Must have outer walls to ensure ball dosn't leave visable area
+Ball must bounce off structures that consist of at least 4 pixels
+Must respond to mouse actions
+Must create obstacles using mouse actions
+
+=======
 Isaiah Jayne
   1.	Must be able to display the ball moving across the screen
   2.	Must be able to recognize when the ball collides with edges/lines
@@ -21,3 +32,5 @@ Adelaide Damrau
 	• How much can I spend?
 	• Programming language?
 	• Count points?
+
+
