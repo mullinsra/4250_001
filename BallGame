@@ -1,2 +1,6 @@
-Please add your name here as a header then indent and add all your requirements for this problem.
+Tanner Collins (I did the driving one as well)
+  Must take input from mouse
+  Must have display and ball object
+  Can allow user to draw obstacles
+  Can have obstacles bigger than 3 pixels
 
