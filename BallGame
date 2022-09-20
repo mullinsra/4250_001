@@ -1,2 +1,4 @@
-Please add your name here as a header then indent and add all your requirements for this problem.
-
+Jackson Coffey
+  Must bounce ball off of the sides of the screen
+  Must bounce ball off of user created obstacles larger than 3px
+  Must have user input
