@@ -1,2 +1,9 @@
 Please add your name here as a header then indent and add all your requirements for this problem.
 
+Janine Day
+  •	The program must have a ball
+  •	The ball needs the ability to bounce
+  •	The mouse needs the ability to draw obstacles
+  •	The program will need to detect the location of the ball vs obstacles and sides of screen
+  •	The program must respond to user actions within 1 second
+  •	The program must allow ball to move concurrently with user actions
