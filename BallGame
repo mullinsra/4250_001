@@ -1,5 +1,7 @@
 Please add your name here as a header then indent and add all your requirements for this problem.
 
+
+
 Joshua Thomas
 Must have ball object
 Ball Must constantly move accross screen
@@ -7,3 +9,28 @@ Must have outer walls to ensure ball dosn't leave visable area
 Ball must bounce off structures that consist of at least 4 pixels
 Must respond to mouse actions
 Must create obstacles using mouse actions
+
+=======
+Isaiah Jayne
+  1.	Must be able to display the ball moving across the screen
+  2.	Must be able to recognize when the ball collides with edges/lines
+  3.	Must be able to calculate the bounce trajectory of the ball off of edges/lines
+  4.	Must allow user to draw lines of > 3 pixel length on the screen with mouse pointer
+  5.	Must recognize when user wants and doesn’t want to draw lines
+  6.	Must be able to start and stop ball program through some easily accessible means
+  7.	Must be compliant with different screen sizes
+
+=======
+Adelaide Damrau
+	• Need a ball, how big? Characteristics?
+	• Need a screen environment, how big? Characteristics?
+	• Measure obstacle size in pixels
+	• Allow user to draw obstacle with mouse on screen with ball
+	• If obstacle size > 3 pixels, bounce ball
+		○ Angle of bounce?
+	• When to have it by?
+	• How much can I spend?
+	• Programming language?
+	• Count points?
+
+
