@@ -1,5 +1,15 @@
 Please add your name here as a header then indent and add all your requirements for this problem.
 
+Isaiah Jayne
+  1.	Must be able to display the ball moving across the screen
+  2.	Must be able to recognize when the ball collides with edges/lines
+  3.	Must be able to calculate the bounce trajectory of the ball off of edges/lines
+  4.	Must allow user to draw lines of > 3 pixel length on the screen with mouse pointer
+  5.	Must recognize when user wants and doesn’t want to draw lines
+  6.	Must be able to start and stop ball program through some easily accessible means
+  7.	Must be compliant with different screen sizes
+
+=======
 Adelaide Damrau
 	• Need a ball, how big? Characteristics?
 	• Need a screen environment, how big? Characteristics?
