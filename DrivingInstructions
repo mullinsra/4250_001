@@ -1,1 +1,29 @@
-Please add your name here as a header then indent and add all your requirements for this problem.
+Jeremy
+    Requirements for driving a car from the Millennium Center parking to McDonald's by the Johnson City Mall
+
+    ## MANDATORY ##
+    - Sub-group: Operating the car
+        - You need to be able to start the car.
+	    - You need to be able to operate the gearshift.
+	    - You need to be able to steer the car.
+	    - You need to be able to accelerate.
+	    - You need to be able to brake.
+	    - You need to be able to use turn signals.
+	
+    - Sub-group: Obeying traffic laws/safety
+	    - You need to have a valid driver's license.
+	    - You need to drive on the right side of the road.
+	    - You need to avoid hitting obstacles.
+	    - You need to drive at the posted speed limit.
+	    - You need to stop at any stop signs.
+	    - You need to stop at any red lights.
+	    - You need to put on your seatbelt.
+
+    ## OPTIONAL ##
+    - You can operate the car's radio.
+    - You can operate the car's windows.
+    - You can operate the car's heating.
+    - You can operate the car's air conditioning.
+    - You can adjust your seat.
+    - You can take the route with the shortest possible travel time.
+    - You can make a stop on the way.
