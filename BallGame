@@ -120,4 +120,16 @@ Hannah Taylor
 	Can change color when it hits a surface
 	Ball must be at least 50 pixels in diameter
  
-
+=======
+Dylan Shaffer
+	Must create a ball object
+	Must use screen edges as a wall/border
+	Must allow users to use mouse to draw objects
+	Ball should bounce off of object if the object is bigger than 3 pixels
+	Ball should go the opposite direction it was travelling when collision occurs
+	Should have a pause menu in one of the corners to allow start/stop
+	Objects should disappear once ball has bounced off of it
+	Can have points based on objects bounced off of
+	Can have failure if hitting outer border
+	Can have different modes (sandbox, limited ink, etc.)
+	Can have customization options for ball and ink (different colors, new shapes, etc.)
