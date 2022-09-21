@@ -1,3 +1,20 @@
+Philip Gaver
+
+  Mandatory
+  1.Must be a ball.
+  2.Must be able to draw obstacles with mouse.
+  3.Must be able to collide with obstacles atleast 3 pixels in size.
+  4.Must be able to bounce off of the screen.
+
+
+
+  Optional
+  1.May change the size of the ball.
+  2.May have a stop and start button.
+  3.May erase obstacles.
+  4.May reset program.
+  5.May have start/stop/pause button
+=======
 Tanner Collins (I did the driving one as well)
   Must take input from mouse
   Must have display and ball object
@@ -91,4 +108,16 @@ Ethan Morgan
 	Should respond to this interaction with the mouse.
 	Should allow a user to draw on screen(creating obstales).
 	Must let ball bounce off obstacles larger than 3 pixels.
+=======
+Hannah Taylor
+	Should run until a key is pressed on the keyboard
+	Should move the ball at a constant rate across the screen
+	Should draw user’s mouse shapes on the screen
+	Should erase mouse drawings after the ball hits it
+	Ball must change directions when hits a surface
+	Direction should be calculated using angles it was moving in
+	Ball can change color as it moves across the screen
+	Can change color when it hits a surface
+	Ball must be at least 50 pixels in diameter
+ 
 
