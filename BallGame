@@ -99,6 +99,16 @@ Adelaide Damrau
 	• Programming language?
 	• Count points?
 
+=======
+Ethan Morgan
+	Must be able to generate a ball object.
+	Must allow this ball to move around the screen.
+	Should allow this ball to bounce off the sides of the screen.
+	Should allow user interaction with the mouse.
+	Should respond to this interaction with the mouse.
+	Should allow a user to draw on screen(creating obstales).
+	Must let ball bounce off obstacles larger than 3 pixels.
+=======
 Hannah Taylor
 	Should run until a key is pressed on the keyboard
 	Should move the ball at a constant rate across the screen
