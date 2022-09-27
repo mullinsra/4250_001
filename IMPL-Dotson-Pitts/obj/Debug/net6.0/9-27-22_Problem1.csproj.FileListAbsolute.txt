@@ -1,0 +1,15 @@
+C:\Users\drd14\source\repos\9-27-22_Problem1\bin\Debug\net6.0\9-27-22_Problem1.exe
+C:\Users\drd14\source\repos\9-27-22_Problem1\bin\Debug\net6.0\9-27-22_Problem1.deps.json
+C:\Users\drd14\source\repos\9-27-22_Problem1\bin\Debug\net6.0\9-27-22_Problem1.runtimeconfig.json
+C:\Users\drd14\source\repos\9-27-22_Problem1\bin\Debug\net6.0\9-27-22_Problem1.dll
+C:\Users\drd14\source\repos\9-27-22_Problem1\bin\Debug\net6.0\ref\9-27-22_Problem1.dll
+C:\Users\drd14\source\repos\9-27-22_Problem1\bin\Debug\net6.0\9-27-22_Problem1.pdb
+C:\Users\drd14\source\repos\9-27-22_Problem1\obj\Debug\net6.0\9-27-22_Problem1.csproj.AssemblyReference.cache
+C:\Users\drd14\source\repos\9-27-22_Problem1\obj\Debug\net6.0\9-27-22_Problem1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\drd14\source\repos\9-27-22_Problem1\obj\Debug\net6.0\9-27-22_Problem1.AssemblyInfoInputs.cache
+C:\Users\drd14\source\repos\9-27-22_Problem1\obj\Debug\net6.0\9-27-22_Problem1.AssemblyInfo.cs
+C:\Users\drd14\source\repos\9-27-22_Problem1\obj\Debug\net6.0\9-27-22_Problem1.csproj.CoreCompileInputs.cache
+C:\Users\drd14\source\repos\9-27-22_Problem1\obj\Debug\net6.0\9-27-22_Problem1.dll
+C:\Users\drd14\source\repos\9-27-22_Problem1\obj\Debug\net6.0\ref\9-27-22_Problem1.dll
+C:\Users\drd14\source\repos\9-27-22_Problem1\obj\Debug\net6.0\9-27-22_Problem1.pdb
+C:\Users\drd14\source\repos\9-27-22_Problem1\obj\Debug\net6.0\9-27-22_Problem1.genruntimeconfig.cache
