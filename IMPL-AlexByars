@@ -1,0 +1,31 @@
+"""
+Author: Alex Byars
+Date: 27 September 2022
+
+This code uses recursion to add two numbers together
+and take the least significant digit of the sum and add
+it to the remaining digits until a single digit remains.
+"""
+
+import math
+ 
+def digSum( n ):
+    sum = 0
+
+    while(n > 0 or sum > 9): # This is the loop to add the least significant digit
+                             # to the remaining digits until a single digit remains
+     
+        if(n == 0):
+            n = sum
+            sum = 0
+         
+        sum += n % 10
+        n /= 10
+     
+    return sum
+ 
+num1 = int(input("Please enter a number: "))
+num2 = int(input("Please enter another number: "))  
+
+n = num1 + num2  # Takes user input and adds them together
+print(digSum(n)) # Prints the single digit
