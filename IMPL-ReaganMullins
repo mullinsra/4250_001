@@ -1,0 +1,56 @@
+// Reagan Mullins
+// September 27, 2022
+
+using System;
+
+namespace InClassExampleSE1
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int x = 1;
+
+                Console.WriteLine("What would you like your first number to be?");
+                string input1 = Console.ReadLine();
+                Console.WriteLine("What would you like your second number to be?");
+                string input2 = Console.ReadLine();
+
+            int num1, num2;
+            //if(x == 1)
+            //{
+                num1 = Int32.Parse(input1);
+                num2 = Int32.Parse(input2);
+                int sum = num1 + num2;
+            //}
+            //else
+            //{
+            //  Console.WriteLine("You did not enter a valid number, please try again later.");
+            //x = 0;
+            //    }
+
+            static int digSum(int n)
+            {
+                int sum = 0;
+
+                while (n > 0 || sum > 9)
+                {
+                    if (n == 0)
+                    {
+                        n = sum;
+                        sum = 0;
+                    }
+                    sum += n % 10;
+                    n /= 10;
+                }
+                return sum;
+            }
+
+                int result = digSum(sum);
+                Console.WriteLine(result);
+        }
+
+    }
+    
+}
