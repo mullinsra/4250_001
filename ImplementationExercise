@@ -1,0 +1,25 @@
+What is included in the Implementation phase?
+More than just coding 
+Especially looking for unit testing
+What does unit testing consist of (not just the happy path)
+How do you comment your code
+https://github.com/kinserw?tab=repositories 
+
+Reminder: In ethics discussion, estimating the coding effort is likely your most common ethical dilemma.
+Reminder: In project mgmt, one of the most common errors in status gathering is a lack of a definition of done.
+ 
+The quiz has 19 questions today so give yourself enough time to complete it.
+
+In class exercise for Implementation
+This exercise will help demonstrate how you approach the Implementation phase of the SE Lifecycle.
+You can work as individuals or in pairs or small groups (but everyone should be able to describe what was done and how the implementation took shape as well as what the artifacts are). 
+For this exercise, I am less interested in a final working program and more interested in what your implementation looks like and what additional artifacts you have.
+At the end of class push your solution (in whatever state it is in) to the shared GitHub repository using the title “IMPL-<yourname/teamname>” . If you work as a team, include all the team members as a comment at the top of the file.
+
+Please choose one of the following programs to implement (you can use Raptor, C#, Perl, Pseudo Code, etc.):
+Using Recursion; take two numbers in from the user (a human) and add them together then separate the least significant digit and add it the remaining digits and so on until you have a single digit answer. 
+
+Take in a string (from a user or a file), compute the total number of occurrences of each character in the ASCII set. Print out the top three characters (with the most occurrences). Print out how many characters in the ASCII set you didn’t detect. Then print out the string in reverse order.
+
+If you finish before time is up, let me know. 
+REMINDER: Definition of Done
