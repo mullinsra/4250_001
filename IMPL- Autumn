@@ -1,0 +1,41 @@
+In psuedo code, string tasks
+
+Design Stage
+The purpose of this assignment is to create a program that can count number of character mentions
+Used a ASCII Table to gather the breakdown of each character
+Brainstorm on what the program has to consist of
+The program will define numerical values for each ASCII character
+  This is to ensure that the code is able to identify each users input
+The program will use users input vs files
+
+Implementing Stage
+
+The first step is to review the ASCII code and which character is what number.
+Loop through ASCII characters [identified as decimal 0-255]
+Create a string with a users chosen character
+There are 256 characters in ASCII 
+String[ASCII character 3]= decimal 51
+add count at 3
+String[ASCII character F]= decimal 70 
+add count at F
+and so on until we have a large number of users inputs
+When a user adds their character, the program adds a count at that character.
+Where there is a count, the program is built to identify that as a mention
+Program reviews all user-entered characters
+Program adds each character's total
+The three characters that are mentioned by users the most are then pulled out and printed.
+After the top three are detected, the program detects all the characters that were not mentioned.
+The program is then created to reverse the string order.
+The program will first detect what characters were not pulled in from users and print out.
+The program will then detect the 3 characters mentioned the most and print it out.
+The program adds each character's total.
+
+Testing stage
+
+If a user adds an unknown variable, the program won't be able to identify it as a ASCII character.
+If a user puts in the actually ASCII variable will the program be able to identify it or do you need to define every ASCII character to its individual number 0-255
+Can a user put more than one character on each line
+Or does each character need to inputed individually
+What will the program do if there is a tie between four top characters, will it print all of the characters?
+Ensure that the system understands every ASCII character and can read them
+Ensure that the program is user friendly and can be read easily to enter data or files
