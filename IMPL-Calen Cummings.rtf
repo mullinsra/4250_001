@@ -1,0 +1,89 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 DONE: The program can take in any two numbers, add them, and then continue adding the least significant digit to the sum and removing that least significant digit after addition until left with only one digit. The correct solution is printed to the screen after computation concludes.\
+\
+Design Path/Structure:\
+Use recursion to perform same operation and add at the end\
+Prompt user for input and loop back if input is incorrect, must prompt and check input twice\
+Have two 
+\f1\b long
+\f0\b0  parameters to include more than integers\
+Capturing user input will cast data as long\
+Remove least significant digit\
+\
+Simple flowchart:\
+Prompt user input \'97> read user input \'97> sanitize/check for compliance, re-prompt if incorrect \'97> prompt for second input \'97> sanitize and check compliance again, repeat if needed \'97> pass into function \'97> add numbers \'97> split least significant digit off and add back to the number \'97> repeat until one digit remains \'97> print answer to the screen\
+\
+\
+\
+Devil\'92s Advocate/Hazards:\
+Need to consider stack overflow exceptions\
+User input can be bad/incorrect format resulting in read/casting error\
+If easy or edge cases don\'92t work then almost impossible to verify that middle cases do\
+Removal of the least significant digit could result in rounding errors if not done properly\
+How big or small of a number will work? How precise? Negatives?\
+Will the prompt for input infinitely loop if not handled/exited properly?\
+Does having signed input limit the potential of the program by introducing a large range of negative values?\
+\
+Unit Testing/Test Set:\
+Should include 0 and a large integer like 123,456\
+Two large integers like 123,456,789 and 987,654,321\
+Negative numbers -345 and -1,111\
+Decimal numbers 0.123456 and 0.123\
+Long decimal numbers 1.123456789 and 7.483175937 (test handling of high precision numbers)\
+First few cases should cover easy to check cases and final tests durability of the solution with risk of stack overflow\
+For bad input testing, string characters, empty string, special characters, or any combination mixed in with a number\
+Bad input should be caught and result in a stable loop of prompting until correct input received, so test loop conditions and make sure infinite loop does not occur\
+\
+\
+Source Code written:\
+\
+/*\
+ * For looping to check for correct input, use external input check that will flip if input is valid, or will maintain loop if exception is thrown.\
+ * Since we are having to try and catch the input, declare input variables outside of the loop to ensure they can be reached.\
+ */\
+\
+int inputCheck = 0;\
+long input1; // does not need to be directly initialized but likely defaults to zero\
+long input2; // same as above\
+long result; // since .NET 6 abstracts a lot of the main template away, we need to use a local method for recursion and store the result in a declared variable.\
+\
+while (inputCheck == 0)\
+\{\
+    Console.WriteLine("Please enter the first number: ");\
+    try\
+    \{\
+        input1 = Int64.Parse(Console.ReadLine()); // Throws FormatException if input invalid\
+        inputCheck = 1; // stop the loop\
+    \}\
+    catch (FormatException ex)\
+    \{\
+        Console.WriteLine("Incorrect format. Please enter a valid number.\\n");\
+    \}\
+\}\
+\
+while (inputCheck == 1) // need to have at 1 to keep looping since success in previous loop sets inputCheck to 1\
+\{\
+    Console.WriteLine("Please enter the second number: ");\
+    try\
+    \{\
+        input2 = Int64.Parse(Console.ReadLine()); // Throws FormatException if input invalid\
+        inputCheck = 0; // stop the loop\
+    \}\
+    catch (FormatException ex)\
+    \{\
+        Console.WriteLine("Incorrect format. Please enter a valid number.\\n");\
+    \}\
+\}\
+\
+// local method to perform recursive calculation\
+void calc(long sum)\
+\{\
+    result = input1 + input2; // add the input numbers together\
+\}\
+// unfinished and slightly incorrect, but would recursively loop and add the previous result to the least significant digit, lop off the LSD, until only one digit remains.}
