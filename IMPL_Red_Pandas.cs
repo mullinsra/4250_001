@@ -1,4 +1,4 @@
-﻿/***
+/***
  * 
 
 Implementation for the project
@@ -61,8 +61,9 @@ namespace Da_Red_Pandas
         //building not for max int currently once we get it working will go back in and add 
         static void Main(string[] args)
         {
-            string line = "----------------------------------------------------";                       //to make pretty
             bool start = false;                                                                         //used for while loop
+            bool keepGoing = true;                                                                      //used to see if the user wants to exit or continue with new numbers 
+            bool finish = true;                                                                         //used for user validation at the exit stage
             bool intCheck1 = false;                                                                     //bools to check if nums are actualy ints
             bool intCheck2 = false;                                                                     //bools to check if nums are actualy ints
             int num1 = 0;
@@ -70,49 +71,77 @@ namespace Da_Red_Pandas
             var num1_check = " n";                                                                      //initial variables taken in to check
             var num2_check = " n";                                                                      //initial variables taken in to check
             int max = int.MaxValue;                                                                     //check for max number
-            
+            int userNum = 0;
 
+
+            line();
             //start program
-            Console.WriteLine("This program will take two numbers as input, and recursively\n" +
-                "separarte off the lest significant digit and add it bac to the previous.  \n" +
-                "if the reuslt is 1 digit it will be returned and printed");
-            while (start == false)
+            Console.WriteLine("This program will take two positive numbers as input, and recursively\n" +
+                "separarte off the least significant digit and add it back to the \nprevious numbers,  " +
+                "if the result is 1 digit it will be returned and printed.");
+            line();
+            while(keepGoing)
             {
-                //num1 
-                Console.WriteLine("Enter a positive number: ");
+                //if user wants to add more than one set of numbers then reset the inital while loop values
+                start = false;
+                finish = true;
 
-                //int check
-                num1_check = Console.ReadLine();
-                intCheck1 = int.TryParse(num1_check, out num1);
+                while (start == false)
+                {
+                    //num1 
+                    Console.WriteLine("\nEnter the first number: ");
 
-                //num2
-                Console.WriteLine("Enter a positive number: ");
+                    //int check
+                    num1_check = Console.ReadLine();
+                    intCheck1 = int.TryParse(num1_check, out num1);
 
-                //int check
-                num2_check = Console.ReadLine();
-                intCheck2 = int.TryParse(num2_check, out num2);
+                    //num2
+                    Console.WriteLine("Enter the second number: ");
+
+                    //int check
+                    num2_check = Console.ReadLine();
+                    intCheck2 = int.TryParse(num2_check, out num2);
 
 
-                //condition to get out of while loop
-                if (intCheck1 && intCheck2 && num1 < max && num2 < max && num1 >= 0 && num2 >= 0)
+                    //condition to get out of while loop
+                    if (intCheck1 && intCheck2 && num1 < max && num2 < max && num1 >= 0 && num2 >= 0)
 
-                    start = true;
-                //exception
-                else
-                    Console.WriteLine(line + "\nOops looks like something was wrong remember to input a positive number " +
-                        "\n(hint: letters are not numbers)\n" + line);
-    
+                        start = true;
+                    //exception
+                    else
+                        line();
+                        Console.WriteLine("\nOops looks like something was wrong remember to input a positive number " +
+                            "\n(hint: letters are not numbers)\n");
+                    line(); 
+
+                }
+
+                //after loop add nums
+                int result = num1 + num2;
+
+                IntRecusion(result);
+
+                while (finish)
+                {
+
+                    //Asking the user for input on whether or not they would like to continue or exit, then validating the input.
+                    Console.WriteLine("Would you like to go again? To insert a new set of numbers insert '1' or '0' to exit.");
+                    var userInput = Console.ReadLine();
+                    bool userCheck = int.TryParse(userInput, out userNum);
+
+                    //Breaking out of the loop if the input is valid and either exiting the program or repeating the process from the beginning. 
+                    if (userCheck)
+                    {
+                        if (userNum == 0)
+                            keepGoing = false;
+                        finish = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nPlease input a valid response.");
+                    }
+                }
             }
-
-            //after loop add nums
-            int result = num1 + num2;
-
-            result = IntRecusion(result);   
- 
-
-            Console.WriteLine("Result: {0}");
-
-            Console.ReadKey();
 
         }
 
@@ -127,33 +156,40 @@ namespace Da_Red_Pandas
         /// <returns></returns>
         static int IntRecusion(int result)
         {
-
-            //
+            //Converting the parameter into a string so it is easier to manipulate later in the code.
             string temp = Convert.ToString(result);
 
+            //Removing the least significant digit from the number and removing it from the other numbers.
             char lastChar = temp[temp.Length - 1];
             string frontHalf = temp.Remove(temp.Length - 1, 1);
 
-            Console.WriteLine(lastChar);
-            Console.WriteLine(frontHalf); 
-            
+            //Converting both numbers back into integers in order to perform addition.
+            int num2Add = Convert.ToInt32(frontHalf);
+            int lastDigit = lastChar - '0';
 
-            int num2add1 = Convert.ToInt32(frontHalf);
-            int num2add2 = Convert.ToInt32(lastChar);
-            
-            
+            result = num2Add + lastDigit;
 
-            Console.WriteLine(num2add1);
-            Console.WriteLine(num2add2);
+            //If the result has more than 1 digit then repeat the process recursively.
+            if (result > 9)
+                IntRecusion(result);
 
-            result = num2add1 + num2add2;
-
-            //if (result > 9)
-            // IntRecusion(result);
-
+            //Once final result is received print it out.
+            if (result < 10)
+                Console.WriteLine("\nResult: " + result);
 
             return result;
 
+        }
+
+        static void line()
+        {
+            string line = "";
+            for(int i = 0; i < 85; i++)
+            {
+                line += '-';
+            }
+
+            Console.WriteLine(line);
         }
     }
 }
