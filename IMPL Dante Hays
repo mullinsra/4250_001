@@ -1,0 +1,116 @@
+##########################################################################################################################################################
+Implementation Exercise
+
+Problem:
+
+Take in a string (from a user or a file), compute the total number of occurrences of each character in the ASCII set. Print out the top three characters (with the most occurrences). Print out how many characters in the ASCII set you didn’t detect. Then print out the string in reverse order.
+##########################################################################################################################################################
+Requirements:
+
+Mandatory
+
+-	Program shall take input in the form of a string.
+-	Program must print top three most frequent ASCII chars.
+-	Program must print the number of ASCII chars not found in the string.
+-	Program shall print the original string in reverse order.
+
+Optional
+
+-	Program may read the input from console(user).
+-	Program may read input from file.
+(Must do at minimum one of these but may do both)
+-	Program may print out instances of which chars were not found in the set, in addition to the number.
+##########################################################################################################################################################
+Design
+
+Definition of Done:
+
+-	The program will be able to read in a string from an input source and then print and display in a meaningful manner, the three most occurring ASCII chars, the number that did not occur at all in the string, and the string in reverse order.
+
+Pseudo Code: (IMPLEMENTED IN PYTHON)
+
+Prompt user for input type (from console or file)
+
+Capture either their string input from the console or the name of the file to read
+	If from a file, read in that file
+
+Set the value from previous to be the working string
+
+Read in CSV of printable ascii chars
+
+Run loop using .Count function for each char
+	For each char:
+	if count is 0 append to no occurrence list
+	else if count > 0 append to count list
+
+Sort count list and print top three char
+
+Print no occurrence list size
+
+Print reverse string
+##########################################################################################################################################################
+Python Code
+
+import pandas as pd
+import os.path
+
+class Charset:
+    char = ""
+    count = ""
+
+#Prompt user for input
+inputSuccess = 1
+
+while inputSuccess > 0:
+
+    consoleOrFile = input("Enter string from Terminal or File? (Enter T or F)\n")
+
+    #if from console
+    if consoleOrFile == "T":
+        workingString = input("\nEnter string and press enter:\n")
+        inputSuccess = 0
+        break
+
+    #if from file
+    elif consoleOrFile == "F":
+        filePath = input("\nEnter full file path:\n")
+        #check if it's a valid filepath
+        if os.path.exists(filePath) == True:
+            workingString = pd.read_csv(filePath)
+            inputSuccess = 0
+            break
+        #if not send em back to the beginning
+        elif os.path.exists(filePath) == False:
+            print("\nThe filepath was invalid or the file does not exist\n\n")
+            continue
+
+    #if they typed something other than "T" or "F" send em back to try again
+    else:
+        print("\nInvalid input\n\n")
+        if inputSuccess == 1:
+            continue
+
+#read csv of printable ascii char
+#ascii = pd.read_csv etc etc
+ 
+""" Run loop using .Count function for each char
+	For each char:
+	if count is 0 append to no occurrence list
+	else if count > 0 append to count list
+
+Sort count list and print top three char
+
+Print no occurrence list size
+
+Print reverse string """
+
+
+
+
+
+
+
+
+
+	
+
