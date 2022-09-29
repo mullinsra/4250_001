@@ -1,0 +1,132 @@
+﻿Colby Kledis                                                                                Testing
+
+
+The solution must support missiles launched by the user
+The solution must initiate a missile launch when the user clicks the right mouse button.
+* User presses Right mouse button, observe if missile is launched.
+* Test with mouse and laptop trackpad to see if still launched.
+
+
+The solution must initiate a missile launch when the user clicks the space bar.
+* User presses space bar, observe if missile is launched.
+* Test with potential touch screen keyboard, such as a mobile device or touch screen laptop.
+
+
+The solution must limit the number of active missiles on the screen to no more than five (5) at any given time. 
+* Press space bar 6 times, observe if missiles are limited to a maximum of 5 on screen at a time
+* Repeat test with right mouse click
+
+
+The solution must remove the missile from being active if it goes off the screen.
+* Press space bar to observe if missile disapears after passing the top of the screen.
+* If previous test of maximum of 5 active missiles was succcsessful, launch 5 missiles and once they have disapeared from the top of the screen attempt to launch more missiles to observe if the previous 5 missiles are actually considered inactive.
+
+
+The solution must maintain the same constant speed for all missiles
+* Launch and time multiple missiles to ensure it takes the same amount of time for each missile to get from launch point to the top of the screen.
+
+
+The solution must launch missiles from the center of the bottom of the screen when a launch is initiated
+* Launch missile in fullscreen to observe if the missile is launched from the bottom center of the screen,
+* Resize screen to both a smaller version with original dimension ratio as well as resize screen to extra wide/thin/short/tall to ensure the missile is launched from the bottom middle of the screen in all scenarios.
+* Rotate the window to see if missile will launch from the bottom middle, relative to the rest of the game, if window is upside down or sideways. (If window is upside down, missile should launch from top middle, if window if sideways missile should launch from left of right respectively.)
+
+
+The solution must maintain the same constant direction for all missiles to be vertically straight up from the launched position.
+* Launch missile in all configurations from previous test to ensure it will go in a straight line.
+* Rotate the window to see if misssile will go straight even if window is upside down or sideways.
+
+
+The solution must detect when a missile “hits” a ship
+The solution must display an explosion at the point where a missile “hits” a ship
+* Launch missile at ship. If missile and ship collide, observe if an expolsion graphic is played.
+* Launch missile near ship but not directly at. If missile is a “near-miss” the explosion graphic should not play.
+The solution must remove the missile and ship after the missile “hits” the ship
+* Launch missile at ship. If missile and ship collide, observe that both the ship and missile are deemed inactive
+* If the tests for maximum of 5 missile (In previous section) and maximum of 10 ships (In following section) are both successful observe that after the ship and missile have disapeared that the game can continue to launch 5 missiles and 10 ships at the same time to ensure both objects are actually inactive.
+The solution must keep a count of all “hits”
+* Launch game, a counter of “Hits: 0” should display
+* If a missile collides with a ship the counter should increase by one
+* If multiple different missiles collide with multiple different ships at the same time the counter should still update the correct value (If two ships are hit, the counter should increase by 2)
+
+
+The solution must support ships launched by the solution
+The solution must initiate a ship launch when the system detects there are no active ships.
+* Launch the game, observe that once started ships begin to appear.
+* Destroy all of the ships on screen with missiles, observe that ships continue to appear.
+
+
+The solution must support multiple types of ships based on a configurable value.
+* Launch the game, observe that multiple types of ships are appearing.
+* Change the value in multiple play sessions for each ship. Observe that in each scenario the correct ship for the match value is the one that appears.
+
+
+The solution must display the appropriate image based on the type of ship when the ship is active
+* Ensure that when a ship is launched the correct image is displayed for the type of ship it is
+* During testing phase you could add a title to each ship with the correct name to ensure the image and title match
+
+
+The solution must randomly initiate a ship launch based on a configurable rate where the default is 30% of the time
+* Launch the game, ensure that ships spawn at the correct rate for the 30% value.
+* Change the value to 100%, observe that all ships appear at the same time.
+* Change the value to 0%, observe that no ships appear.
+
+
+The solution must randomly choose from available ship types when a launch is initiated, giving all types equal chance of being launched.
+* Start the game, observe that all of the ships implemented are appearing at a near equal rate.
+* This will require multiple tests just in case one of the tests is a statistical outlier for ship distribution
+
+
+The solution must limit the number of active ships on the screen to no more than ten (10) at any given time. 
+* Start game, observe that the number of ships never reaches over 10
+* If the % value for ship launch test is succsesful change said % value to 100%, observe that only ten ships appear, no more.
+
+
+The solution must randomly choose a location to launch a ship from when initiated
+* Start game, observe ship spawn locations. They should appear from different areas.
+* If the % value for ship launch test is successful change said % value to 100%, observe that the ships all appear in different locations. 
+* Run each of these tests multiple times to remove statistical outliers.
+
+
+The system must randomly choose to launch the ship from the left side of the screen or the right side of the screen
+* Start game, observe ship spawn locations. They should appear from different sides of the screen.
+* If the % value for ship launch test is successful change said % value to 100%, observe that the ships all appear on different sides. 
+* Run each of these tests multiple times to remove statistical outliers.
+
+
+The system must randomly choose a row in the top two-thirds of the screen to launch the ship from
+* Start game, observe ship spawn locations. They should appear from different areas.
+* If the % value for ship launch test is successful change said % value to 100%, observe that the ships all appear in different locations. 
+* Each ship in each of these tests should only appear in the top two thirds of the screen
+* Run each of these tests multiple times to remove statistical outliers.
+
+
+The system must assign the speed of the ship based on the type of the ship being initiated
+* Start game, observe and note each ship type and its speed.
+* If ship type configurable value test is successful run a test for each type of ship where all ships in the test are the same type, ensure all ships in each respective test are the same speed
+
+
+The system must assign the direction of the ship based on which side of the screen it is being launched from 
+* Start game and wait for a ship to spawn on the left and right, observe that each ship moves in the correct direction across the screen.
+
+
+The solution must remove the ship from being active if it goes off the screen.
+* Ensure the ship disappears when reaching the end of the screen.
+* If maximum of 10 ships test is successful, continue to observe that ships continue to spawn after 10 ships have disappeared to ensure the ships are actually inactive.
+
+
+The solution must end the game when the “hit” count has reached ten (10)
+* Start game and play until counter reaches ten, ensure the game ends.
+
+
+The solution must end the game when the user clicks the left mouse button
+* Start game and click left mouse button, ensure the game ends.
+
+
+The solution must end the game when the user clicks the esc button
+* Start game and click ESC, ensure the game ends.
+
+
+The solution must end the game if the user has not initiated a missile launch in the last 5 minutes.
+* Start game and leave idle for 5 minutes, ensure the game ends.
+* Start game and leave idle for 4 minutes, launch a missile, continue to wait for 5 minutes, ensure the game ends only after the 5 minute inactive period.
