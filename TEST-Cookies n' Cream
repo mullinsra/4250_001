@@ -1,0 +1,120 @@
+TEST CASES FOR BATTLESHIP by Calen Cummings and Dante Hays
+
+The solution must support missiles launched by the user
+
+    #The solution must initiate a missile launch when the user clicks the right mouse button.
+    #The solution must initiate a missile launch when the user clicks the space bar.
+
+        - Click the right mouse button and observe if a missle was successfully launched by user input
+        - Press the space bar and observe if a missle was successfully launched by user input
+
+    #The solution must limit the number of active missiles on the screen to no more than five (5) at any given time. (an “active missile” is any missile currently being displayed on the screen)
+
+        - Press the space bar 6 times in rapid succession and observe that a 6th active missle was not launched
+        - Click the right mouse button 6 times in rapid succession and observe that a 6th active missle was not launched
+
+    #The solution must remove the missile from being active if it goes off the screen.
+
+        - Launch 5 missles and wait to observe if a missle is not longer active after reaching the edge of the screen
+        - Resize the window and repeat to ensure it the missles are no longer active for various window sizes as well as fullscreen
+        
+    #The solution must maintain the same constant speed for all missiles
+
+        - Launch mutliple missles in rapid succession and observe if they travel at the same constant speed
+        - Launch mutliple missles in a slow manner and observe if they all travel at the same constant speed
+
+    #The solution must launch missiles from the center of the bottom of the screen when a launch is initiated
+
+        - Launch a missle and observe if it is launched from the center bottom of the screen
+        - Repeat with various window sizes as well as fullscreen to ensure missles are fired from center bottom for all window sizes
+
+    #The solution must maintain the same constant direction for all missiles to be vertically straight up from the launched position.
+
+        - Launch multiple missles and observe if they travel in the same constant direction, vertically and straight from the launched position
+
+The solution must detect when a missile “hits” a ship
+
+    #The solution must display an explosion at the point where a missile “hits” a ship
+    #The solution must remove the missile and ship after the missile “hits” the ship
+
+        - Launch a missle such that it "hits" a ship and observe to see if an explosion is displayed at the point where it was impacted
+        - Additionally observe if, after a successful hit, both the missle and ship are removed from the screen.
+
+    #The solution must keep a count of all “hits”
+
+        - After a successful hit observe the hit counter to ensure that it was successfully incremented by 1
+
+    #The solution must randomly choose a location to launch a ship from when initiated
+    #The system must randomly choose to launch the ship from the left side of the screen or the right side of the screen
+    #The system must randomly choose a row in the top two-thirds of the screen to launch the ship from   
+
+            - Start the game and observe to see if the ships are launched from random positions
+            - Track to ensure that they are not launched from the same positions or in an observable pattern
+
+    #The system must assign the speed of the ship based on the type of the ship being initiated
+
+            - Observe to see if the different ships travel at different rates depending on their type
+
+    #The system must assign the direction of the ship based on which side of the screen it is being launched from (if from the left, direction goes left to right; if from the right, direction goes right to left)
+
+            - If a ship is laucned from the left observe that it travels to the right and vice versa
+
+    #The solution must remove the ship from being active if it goes off the screen.
+            
+            - If the ship leaves the screen ensure it is no longer active by seeing if 10 ships at most are visible on the screen (The maximum number that can be active)
+            
+    #The solution must initiate a ship launch when the system detects there are no active ships.
+    
+            - Start the game and see if ships appear; since the game is just starting, there is a point where there are no active ships
+            
+            - Launch missles and destroy all ships on screen and see if more ships spawn
+            
+    #The solution must support multiple types of ships based on a configurable value.
+    
+            - See if different types of ships appear when the game starts
+            - Change configurable value and observe how it affects starting spawns
+            - Destroy ships and see if new types launch to replace them
+            - Change configurable value again and see if different ships appear more
+            - Track by observation how many different types of ships are seen; if the same ship type is spawned constantly then this fails
+            
+    #The solution must display the appropriate image based on the type of ship when the ship is active
+    
+            - Change configurable value for ships from default and see if different types spawn
+            - Destroy ships with missles and see if they have different images to reflect the different types
+            - Observe ship speed if different types of ships travel at different speeds
+            
+    #The solution must randomly initiate a ship launch based on a configurable rate where the default is 30% of the time
+    
+            - Change the rate to 100% and see if ships spawn constantly
+            - Change the rate to 50% and see if ships spawn quite often
+            - Keep the rate at 50% and see if a ship spawns after every other destroyed ship
+            
+    #The solution must randomly choose from available ship types when a launch is initiated, giving all types equal chance of being launched.
+    
+            - Change the configurable value to allow for more ship types and see if equal numbers of each type spawn
+            - Change the value again to accommodate 2 ship types and see if they spawn with equal frequency after destroying ships
+            
+    #The solution must limit the number of active ships on the screen to no more than ten (10) at any given time. (an “active ship ” is any ship currently being displayed on the screen)
+    
+            - Change the ship launch rate to 100% and shoot no missles to have the maximum amount of ship spawning displayed, see if more than 10 ships appear
+            - Keep the rate at 100% and destroy 5 ships, see if 6 or more spawn to replace them and see if this breaks the limit of 10
+
+    #The solution must end the game when the “hit” count has reached ten (10)
+    
+        - Launch missles and hit ships until the counter reaches 10
+        - See if the game ends when the counter reaches 10; if the player can still launch missles then the game has not ended.
+        
+    #The solution must end the game when the user clicks the left mouse button
+    
+        - Press keys other than left mouse to see if they affect the game or not
+        - Click the left mouse button and see if the the game ends or allows the player to continue launching missles
+        
+    #The solution must end the game when the user clicks the esc button
+    
+        - Press keys other than the left click, right click, or spacebar and see if the game is affected at all
+        - Press the esc key and see if the game ends, if missles can be launched then game has not ended
+        
+    #The solution must end the game if the user has not initiated a missile launch in the last 5 minutes.
+    
+        - Press keys except for the spacebar, right click, left click, or esc for 5 minutes and see if the game ends on its own
+        - Launch a few missles to start, and then press no keys for 5 minutes and see if the game ends
