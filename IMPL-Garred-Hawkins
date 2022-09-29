@@ -1,0 +1,22 @@
+using system;
+
+class FindSmallestDigit {
+    static int SumOfDigits(int a) {
+        int sum = 0;
+
+        while (a > 0 || sum > 9) {
+            if (a == 0) {
+                a = sum;
+                sum = 0;
+            }
+            sum += a % 10;
+            a /= 10;
+        }
+        return sum;
+    }
+    public static void Main() {
+        int a = 1111;
+        Console.Write(SumOfDigits(n));
+    }
+    
+}

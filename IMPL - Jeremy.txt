@@ -1,0 +1,77 @@
+// Take two numbers in from the user (a human) and add them together then separate the least significant digit
+// and add it the remaining digits and so on until you have a single digit answer
+
+// ASSUMPTIONS:
+// - The user input must be integers, i.e. constrained from 2^31 - 1 to -2^31
+// - Overflows and underflows from adding inputs are permissible
+// - Negative input values are permissable
+
+
+bool notNumber = true
+int num1
+int num2
+
+// Read in the first number and make sure that it's a valid integer
+print "Please enter a first number, as a digit"
+while (notNumber)		// Loop will continue until input is a valid int
+	string input = read()
+	
+	if (input.TryParse() not a valid int)
+		print "That is not a digit."
+	else
+		num1 = input
+		notNumber = false
+
+// Read in the second number and make sure that it's a valid integer
+print "Please enter a second number, as a digit"
+notNumber = true
+while (notNumber)		// Loop will continue until input is a valid int
+	sring input = read()
+
+	if (input.TryParse() not a valid int)
+		print "That is not a digit. 
+	else
+		num2 = input
+		notNumber = false
+
+
+try 
+	funct(num1, num2)
+catch (RecursiveDepthException)
+	print "The two inputs cannot be processed."
+
+
+// This function takes in two integers, adds them together, and if the result isn't a single digit
+// then separates the result into least significant digit and remaining digit and recursively calls
+// the function using those two integers as input. The function also takes a depth parameter that 
+// measures the recursive depth, and terminates the function before it can overflow the stack by
+// throwing an exception. Negative integers are allowed as inputs, and as a result it is also
+// possible to get a negative output. The depth variable which records the recursive depth has a
+// default value of 0 if nothing is passed, and gets incremented upon each recursive call; the
+// function throws an exception if the maximum depth of 10 is surpassed.
+int funct(int num1, int num2, int depth = 0)
+	if (depth > 10 || depth < 0)
+		throw RecursiveDepthException
+
+	int result = num1 + num2
+	
+	if ((result / 10) == 0)		// If the result / 10 is equal to 0, then result is a single digit, so we're done
+		return result
+	else				// Otherwise we need to call the function again
+		int LSD = result % 10	// Modulo by 10 leaves the least significant digit
+		int MSDs = result / 10	// Dividing by 10 leaves the most significant digits
+		
+		return funct(LSD, MSDs, depth + 1)
+
+
+
+// UNIT TESTING
+assert funct(0, 0, 11) throws RecursiveDepthException
+assert funct(0, 0, -1) throws RecursiveDepthException
+assert funct(0, 0, 0) returns 0
+assert funct(1, -1, 0) returns 0
+assert funct(1, 1, 0) returns 2
+assert funct(10, 10, 0) returns 2
+assert funct(123, 123, 0) returns 3
+assert funct(123456, 123456, 10) throws RecursiveDepthException
+assert funct(-24, 51, 0) returns 9

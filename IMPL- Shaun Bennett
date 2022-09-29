@@ -1,0 +1,52 @@
+Take in a string (from a user or a file), compute the total number of occurrences of each character in the ASCII set. 
+Print out the top three characters (with the most occurrences). Print out how many characters in the ASCII set you didn’t detect. 
+Then print out the string in reverse order.
+Methods:
+
+// The method that will take the user input. It will need to take the string from the user then. It will test 
+//that string to make sure that the string entered will be over three characters and three distinct 
+//characters so that the program will be able to print the top three characters with the most                          
+// occurrences.
+
+UserInput:
+While:
+Print(“Please a string that is at least 3 characters along and those characters be distinct from one another.”)
+If the string is smaller than 3 characters
+If the string doesn’t have three distinct characters
+Else Accept the user input then run
+
+// TotalOccurences: The total occurrences will take the string from the user and break it down then sort 
+// the occurrences by how many each occurrences happened. When it has the list of the occurrences it 
+// will take the three most occurrences and print those out.
+
+TotalOccurences:
+Takes UserInput
+Converts UserInput into a TotalOccurences
+Sorts TotalOccurences into the high to low of the amount of the occurences
+Gets the top three occurrences and puts into list TopThree
+Prints TopThree
+
+//ASCIMissing: This method will need to use the TotalOccurences to get all of the occurrences from the 
+// string and then compare that list from TotalOccurences to a list of all the ACSII characters. Once it            
+// gets the list of missing ASCI characters it will print the ASCIMissing list.
+	
+ASCIMissing:
+
+//StringReverse: This method will take the UserInput string and then reverse it.
+StringReverse:
+
+Unit Testing
+
+UserInput:
+//The Unit testing for the UserInput method would test to see if the user entered the required length 
+//and make sure they are distinct. It would make sure it doesn’t take a null as a input either. It will test 
+//to make sure that all characters entered would be printable by the program.
+
+TotallOccurences:
+// TotalOccurences:  Will need to test to see what happens when there are more then top 3 characters 
+// have the same number of characters. If that happens, have it display the extra ASCI characters next to 
+// each other on the print list for the top three characters
+
+ASCIMissing:
+// ASCIMissing: 
+
