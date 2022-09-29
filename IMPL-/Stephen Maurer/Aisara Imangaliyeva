@@ -1,0 +1,95 @@
+Design/Sudo Code
+Main()
+Take in two numbers from user
+Verify two numbers 
+Call LeastSig()
+Print answer
+
+LeastSig(double num1, double num2)
+Num 1 = Add num1 and num2
+Check if single digit(Return)
+Num2 = Remove least significant number from num1
+Call LeastSig(num1, num2)
+
+Constraints
+Whole numbers
+No negatives
+Only Numbers
+
+Tests
+7+15
+9999 + 9999
+
+Code C#:
+
+using System;
+
+namespace RemoveLeastSignificantNumber
+{
+    /// <summary>
+    /// Takes in two user numbers and recursively adds them together removing the least significant number until only one number position remains.
+    /// </summary>
+    class Driver
+    {
+        static void Main(string[] args)
+        {
+            int num1 = -1; //First number
+            int num2 = -1; //Second number
+            int placeHolder = -1; //placeholder for input check.
+
+            ///First number input while loop
+            while (num1 < 0)
+            {
+                Console.WriteLine("Please input your first whole positive number no greater then 9999.");
+                if (int.TryParse(Console.ReadLine(), out placeHolder) && placeHolder > -1 && placeHolder < 10000)//Error Checking for positive whole number
+                {
+                    num1 = placeHolder;
+                }
+            }
+
+            while (num2 < 0)
+            {
+                Console.WriteLine("Please input your second whole positive number no greater then 9999.");
+                if (int.TryParse(Console.ReadLine(), out placeHolder) && placeHolder > -1 && placeHolder < 10000)//Error Checking for positive whole number
+                {
+                    num2 = placeHolder;
+                }
+            }
+
+            Console.WriteLine("The answer is: " + LeastSignificantNumber(num1, num2));//Call for LeastSig method and output of answer.
+
+        }
+
+        /// <summary>
+        /// Takes in twonumbers and recursively adds them together removing the least significant number until only one number position remains.
+        /// </summary>
+        /// <param name="num1"></param>
+        /// <param name="num2"></param>
+        /// <returns>Single digit leftover.</returns>
+        static int LeastSignificantNumber(int num1, int num2)
+        {
+            num1 += num2;
+
+            string stringNumber = num1.ToString();
+            Console.WriteLine(stringNumber.Length);
+
+            if (stringNumber.Length == 1) //Check if num1 is a single digit
+            {
+                return num1; // return               
+            }
+
+            ///Enter lowest significate digit in num2
+            string stringNumber2 = stringNumber[stringNumber.Length - 1] + "";
+            num2 = int.Parse(stringNumber2);
+
+
+            stringNumber = stringNumber.Remove(stringNumber.Length - 1, 1);// Remove lowest significant digit from stringNumber           
+
+            num1 = int.Parse(stringNumber);//Enter stringNumber in num1 removing the lowest significant number.
+
+            num1 = LeastSignificantNumber(num1, num2); //Recursive call
+
+            return num1; //Return.
+        }
+    }
+}
