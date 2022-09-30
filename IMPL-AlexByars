@@ -1,3 +1,8 @@
+WCK- it appears that perhaps you jumped into coding without doing any design work, there are no test cases or test data, Some comments but missing explanation 
+       digSum (should appear before the method). The code will only work (from what I can tell) in certain happy paths, not all, and not the unhappy paths.
+       I mentioned negative numbers and maxInt scenarios in class but these are not taken into consideration here. "Running code" is not the same as
+       "working code". The whole point of the required reading was to NOT start coding, think the problem through first (i.e. design) and then code, then validate
+       with test cases and test data.
 """
 Author: Alex Byars
 Date: 27 September 2022
@@ -9,10 +14,12 @@ it to the remaining digits until a single digit remains.
 
 import math
  
-def digSum( n ):
+def digSum( n ): WCK-you should have a comment for this method (you have the above for the whole program but this method does only part)
     sum = 0
-
-    while(n > 0 or sum > 9): # This is the loop to add the least significant digit
+WCK - THIS is not recursion; you are looping. Recursion is where you call digSum from within itself until you have a single digit
+      and then the call tree unwinds to return the final single digit.
+      
+    while(n > 0 or sum > 9): # This is the loop to add the least significant digit         WCK- what if n = -5032? 
                              # to the remaining digits until a single digit remains
      
         if(n == 0):
@@ -24,8 +31,8 @@ def digSum( n ):
      
     return sum
  
-num1 = int(input("Please enter a number: "))
+num1 = int(input("Please enter a number: "))                                   WCK- what if user pass in a floating point number? what if it is non-numeric?
 num2 = int(input("Please enter another number: "))  
 
-n = num1 + num2  # Takes user input and adds them together
-print(digSum(n)) # Prints the single digit
+n = num1 + num2  # Takes user input and adds them together                     WCK- what if num1 and num2 are both maxInt?
+print(digSum(n)) # Prints the single digit                                     
