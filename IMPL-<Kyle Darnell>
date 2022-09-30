@@ -1,12 +1,18 @@
-Requirements
-- Must except user input.
+WCK- Overall, good job. The point of the exercise was to think the problem out before coding it. To take time to understand the requirements 
+by doing a design, to define test cases and test data, etc. You did most of that. Most importantly, you didn't jumpt into coding.
+
+
+Requirements               WCK- would have been better to just copy what I gave you here and then broken it down into individual requirements
+                                because they should read, "Must add the TWO given numbers together". As you wrote it, it doesn't say how many 
+                                numbers the user provides. And you missed "Must use recursion"
+- Must except user input.    
 - Must add the given numbers together.
-- Must seperate the least significant digit from the total. 
+- Must seperate the least significant digit from the total.   
 - Must add the seperated digit to the remaining digits.
 - Must add least significant digit continuesly until condition is met.
 - Must determine when the added numbers total a single digit.
 
-Constraints 
+Constraints                                WCK- good comments here. this gives me context for testing and evaluation
 - Will not accept decinamls
 - Will not accept negatives
 - Will not accept non-integer characters, (# , $ !)
