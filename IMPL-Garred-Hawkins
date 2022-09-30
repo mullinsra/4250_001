@@ -1,3 +1,12 @@
+WCK - The point of the exercise was to think the problem out before coding it. To take time to understand the requirements 
+by doing a design, to define test cases and test data, etc. You did not do this. You jumped into code so fast you didn't
+even code a solution for the right problem. You seemed to redefined the problem and then coded it without any design.
+You have no comments. you have no test data or test cases. your logic is flawed. You didn't ask for input or
+add the two user numbers together (since you didn't input them), no validation,
+AND you didn't use recursion; you looped instead.
+
+-Please go back and read the required materials for the Implementation lesson.
+
 using system;
 
 class FindSmallestDigit {
