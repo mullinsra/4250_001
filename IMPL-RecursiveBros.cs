@@ -1,4 +1,21 @@
-﻿using System;
+WCK- The point of the exercise was to think the problem out before coding it. To take time to understand the requirements 
+by doing a design, to define test cases and test data, etc. 
+You have a rough design and some test cases.
+	
+You declare but don't initialize variables (required reading said don't do this). 
+You have a "while(true)" loop that you use "break" to end. This is not good practice. 
+If I enter two max int values they pass your parse test but will overflow when you add them together (this was a test case I provided during class). 
+You have no validation for this. 
+You have multiple return statements for the same method which the required reading says don't do this. 
+You don't explain what LSB means. Your comments in LSB are so long I had to edit the file to see them. 
+The "if (num6 < 10) is redundant with the "if (num3 < 10)" . You should just call LSB again at this point. 
+Why do you treat negative numbers differently. This should be explained in the comments. 
+Also, your variable names should be more descriptive, e.g. "remainder" or "leastSigDigit" instead of "num4". 
+I don't see anything for stack overflow (another test case I provided in class). 
+	
+												  
+												  
+using System;
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,11 +62,11 @@ namespace RecursiveNumberSeperation
             int num1;
             int num2; //initialize ints
             int num3;
-            int finalOutput = new int();
+            int finalOutput = new int();   WCK- why initialize this one and not the others ones?
             
              // Collects the first integer and error checks it
             Console.WriteLine("Enter the First Integer please: ");
-            while(true)
+            while(true)   WCK- THIS IS BAD PRACTICE
             {
                 if (!int.TryParse(Console.ReadLine(), out num1))
                 {
