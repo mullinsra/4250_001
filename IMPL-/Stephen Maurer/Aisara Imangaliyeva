@@ -1,5 +1,9 @@
-Design/Sudo Code
-Main()
+WCK - Overall, very good job. The point of the exercise was to think the problem out before coding it. To take time to understand the requirements 
+by doing a design, to define test cases and test data, etc. You did all that. 
+Other comments below preceeded by WCK-
+
+
+Design/Sudo CodeMain()
 Take in two numbers from user
 Verify two numbers 
 Call LeastSig()
@@ -11,12 +15,12 @@ Check if single digit(Return)
 Num2 = Remove least significant number from num1
 Call LeastSig(num1, num2)
 
-Constraints
+Constraints                           WCK- good. this gives me context for testing and evaluation
 Whole numbers
 No negatives
 Only Numbers
 
-Tests
+Tests                                WCK- need more than this (maxInt,maxInt), (-MaxInt, -maxInt), (0,0), (-1234,-1234), (1234,1234), (hi,there), (1.24,47), etc.
 7+15
 9999 + 9999
 
@@ -35,13 +39,17 @@ namespace RemoveLeastSignificantNumber
         {
             int num1 = -1; //First number
             int num2 = -1; //Second number
-            int placeHolder = -1; //placeholder for input check.
+            int placeHolder = -1; //placeholder for input check.              WCK- good job initiatizing variables)
 
             ///First number input while loop
             while (num1 < 0)
             {
                 Console.WriteLine("Please input your first whole positive number no greater then 9999.");
                 if (int.TryParse(Console.ReadLine(), out placeHolder) && placeHolder > -1 && placeHolder < 10000)//Error Checking for positive whole number
+                            WCK- when doing compound condition, group them with parens to make it easier to read, and consider breaking them up, 
+                            e.g         (int.TryParse(Console.ReadLine(), out placeHolder) && // ensure it is an Integer
+                                         (placeHolder > -1) &&                                // ensure it is non negative
+                                         (placeHolder < 10000))                               // ensure it is ???? I'm not sure what you are doing here;
                 {
                     num1 = placeHolder;
                 }
@@ -60,7 +68,7 @@ namespace RemoveLeastSignificantNumber
 
         }
 
-        /// <summary>
+        /// <summary>             WCK- GOOD
         /// Takes in twonumbers and recursively adds them together removing the least significant number until only one number position remains.
         /// </summary>
         /// <param name="num1"></param>
@@ -68,9 +76,9 @@ namespace RemoveLeastSignificantNumber
         /// <returns>Single digit leftover.</returns>
         static int LeastSignificantNumber(int num1, int num2)
         {
-            num1 += num2;
+            num1 += num2;              WCK- even though you check for a max value before calling, you should have validation here to detect overflow
 
-            string stringNumber = num1.ToString();
+            string stringNumber = num1.ToString();                   WCK- I would have used Modulo
             Console.WriteLine(stringNumber.Length);
 
             if (stringNumber.Length == 1) //Check if num1 is a single digit
