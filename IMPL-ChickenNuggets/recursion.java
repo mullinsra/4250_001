@@ -1,5 +1,6 @@
 WCK - The point of the exercise was to think the problem out before coding it. To take time to understand the requirements 
 by doing a design, to define test cases and test data, etc. You did most of this but there are some holes. It's okay. This is how we learn.
+Question: did you write the design document first? It kind of looks like you wrote the code first then pasted it into your design doc.
     
 WCK - some flaws in your design 
 - not enough test data. you only account for one happy path.
