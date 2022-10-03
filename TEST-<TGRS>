@@ -1,3 +1,7 @@
+WCK- feedback inlined below with the prefix of WCK-
+Overall these are good. It took me a minute to find your format (this is hard to read)
+but then I see you have test steps followed by expected results; this is what I'm looking for.
+
 Trevor Taylor, Garred Hawkins, Reagan Mullins, & Shaun Bennett
 Solution: a game where the player shoots a missile at ships passing across the screen (like the one I showed you using raptor).
 When user initiates a launch (spacebar or right mouse) a missile fires
@@ -43,8 +47,19 @@ The solution must support multiple types of ships based on a configurable value.
 Support multiple ship types based on speed
 The solution must display the appropriate image based on the type of ship when the ship is active
 Differentiate ship image based on speed of ship
+WCK- best way to test the image is to set only one type of ship, assign an image, verify that image, 
+      then change the image and verify the image changes in the game.
+
 The solution must randomly initiate a ship launch based on a configurable rate where the default is 30% of the time
 Test multiple rates of spawning to see if the rate increases or decreases based on the rate chosen.
+
+WCK- I added configuration to the requirements to help with testing. YOu can set the rate to 0% and 
+no ships should appear (except there is a requirement that one must appear if none is on the screen, so 
+with a 0% rate one and only one ship should appear on the screen). Set to 100%, a constant stream of
+new ships should appear until a max of 10 are displayed and then another one appears each time an
+active ship goes off the screen. This way you can test multiple requirements with just a few tests.
+
+
 The solution must randomly choose from available ship types when a launch is initiated, giving all types equal chance of being launched.
 Launch multiple ships and see if all ships are frequently appearing at the same rate.
 The solution must limit the number of active ships on the screen to no more than ten (10) at any given time. (an “active ship ” is any ship currently being displayed on the screen)
