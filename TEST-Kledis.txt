@@ -1,10 +1,14 @@
-﻿Colby Kledis                                                                                Testing
+WCK- overall very good. you have traceability, test steps and expected results.
+more feedback inlined with WCK- as the prefix
+
+Colby Kledis                                                                                Testing
 
 
 The solution must support missiles launched by the user
 The solution must initiate a missile launch when the user clicks the right mouse button.
 * User presses Right mouse button, observe if missile is launched.
 * Test with mouse and laptop trackpad to see if still launched.
+WCK- I don't think I saw anyone else take laptop trackpad into consideration. Nice!
 
 
 The solution must initiate a missile launch when the user clicks the space bar.
@@ -30,7 +34,7 @@ The solution must launch missiles from the center of the bottom of the screen wh
 * Launch missile in fullscreen to observe if the missile is launched from the bottom center of the screen,
 * Resize screen to both a smaller version with original dimension ratio as well as resize screen to extra wide/thin/short/tall to ensure the missile is launched from the bottom middle of the screen in all scenarios.
 * Rotate the window to see if missile will launch from the bottom middle, relative to the rest of the game, if window is upside down or sideways. (If window is upside down, missile should launch from top middle, if window if sideways missile should launch from left of right respectively.)
-
+WCK- very nice.
 
 The solution must maintain the same constant direction for all missiles to be vertically straight up from the launched position.
 * Launch missile in all configurations from previous test to ensure it will go in a straight line.
@@ -64,12 +68,18 @@ The solution must support multiple types of ships based on a configurable value.
 The solution must display the appropriate image based on the type of ship when the ship is active
 * Ensure that when a ship is launched the correct image is displayed for the type of ship it is
 * During testing phase you could add a title to each ship with the correct name to ensure the image and title match
+WCK- actually you shouldn't change the code you are test. create a philosophical debate because you have to change the code back after the test so did you really test the code being released?
+Better solution here is to set ship type to 1, add an image, verify the image is displayed, change the image
+verify the new image is displayed. you could trip it up by adding really small and really big images to
+see how the program handled it.
 
 
 The solution must randomly initiate a ship launch based on a configurable rate where the default is 30% of the time
 * Launch the game, ensure that ships spawn at the correct rate for the 30% value.
 * Change the value to 100%, observe that all ships appear at the same time.
 * Change the value to 0%, observe that no ships appear.
+WCK- actually for 0%, I would expect one and only one and always one to appear because you have another
+requirement that says a ship much be launched if none are on the screen.
 
 
 The solution must randomly choose from available ship types when a launch is initiated, giving all types equal chance of being launched.
@@ -80,7 +90,7 @@ The solution must randomly choose from available ship types when a launch is ini
 The solution must limit the number of active ships on the screen to no more than ten (10) at any given time. 
 * Start game, observe that the number of ships never reaches over 10
 * If the % value for ship launch test is succsesful change said % value to 100%, observe that only ten ships appear, no more.
-
+WCK- perfect
 
 The solution must randomly choose a location to launch a ship from when initiated
 * Start game, observe ship spawn locations. They should appear from different areas.
