@@ -1,3 +1,6 @@
+WCK- initial impression is really good. You trace to the requirements, you define steps, and you have expected outcomes.
+more comments inlined below with WCK- prefix
+
 TEST CASES FOR BATTLESHIP by Calen Cummings and Dante Hays
 
 The solution must support missiles launched by the user
@@ -68,6 +71,9 @@ The solution must detect when a missile “hits” a ship
             - Start the game and see if ships appear; since the game is just starting, there is a point where there are no active ships
             
             - Launch missles and destroy all ships on screen and see if more ships spawn
+       WCK- this would be hard to do because more ships will probably keep appearing so there would never be a point where there are no ships. 
+       Better way to do this is to combine with other requirements, set the config rate to 0% which causes no ships to be generated but this requirement should force one, thus there would be one and only one and always
+       one on the screen. The you can change the rate to 100% to test other requirements like max number of ships.
             
     #The solution must support multiple types of ships based on a configurable value.
     
