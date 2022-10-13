@@ -5,6 +5,11 @@ Iteration for BucHunt
 Iterations timeframe: 2 weeks.
 Team size: 3
 
+WCK- overall, I like the rationale behind your choices. It makes logical sense and I don't see any issue with the order you selected.
+The scope of each iteration may not be consistent but that's not surprising as experience is the best teacher for this. 
+It looks like you kept iteration 1 lite and I liked that you settled on CLI to keep it easier. The first iteration always has suprises
+around the release process and the environments.
+
 Iteration 1:
 	In the first interation our team will focus on the basic logic of
 	the game. We would implement the ability for an admin to create, edit, delete,
