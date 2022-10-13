@@ -1,6 +1,9 @@
 Stephen Maurer, Aisara Imangaliyeva, Shaun Bennett, Alex Byars
 FIRST ITERATION
+WCK- there are no passwords or photos or team names; Player info includes: username (default to random #), email, phone; 
+WCK- for admin, think incrementally; if the admin console is only running on the server, you don't need a username or password; only admins can get to the server. 
 Database/ Server: Storing Basic Player Information(Account username/Password/Email/Phone number/Photo/Team) & Admin Account(Account username/Password) & Unique Verification codes attached to each player.
+WCK- there is no signup page;
 Webpage: Basic Signup page, Admin UI for account verification.
 Phone App: Basic Account Setup Gui
 Texting/Email: Access Code, Url, and SMS text sent out.
