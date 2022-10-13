@@ -8,12 +8,14 @@ Date: 10/13/2022
 
 Iteration length: 1 week. We based this off the time of the sprints for the group project at the end of the semester in this classes. 
 
+WCK- your format is very Scrum like; the title you have for each iteration is similar to what is called a Sprint Goal; which the team defines at the start of each sprint. 
 Iteration 1: Build admin and player objects and determine how to store them. CSV file?
 	
 	Reasons: There's no reason to work on a front end if there's no backend logic. We will need the user objects
 	to build functionality in the game that tracks user project. We will need admin users to work on a user 
 	management system later on. 
 	
+	WCK- I would think the list below could be done by 2 people in a week; there will be ~9 people on each scrum team; Food for thought.
 	Requirements: Determine required properties for players and admins.
 	Design: Build class UML diagrams with properties from requirements.
 	Implementation: Code it.
