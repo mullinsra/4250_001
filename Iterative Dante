@@ -1,0 +1,56 @@
+BucHunt PID Iterative Exercise 
+
+Technologies to implement:
+- MVC
+- Entity Framework
+- Some kind of DB
+
+
+Iteration 1:
+
+Implementation of the email and SMS interfacing with user. This can be populated with dummy data that will be replaced with the proper access code and message in a a later release.
+
+Server Side: 
+Basic server architecture
+Properties for user (email, phone, username, grade level, etc)
+Will receive email and phone number from client side, and return a message with dummy data to both
+
+Client:
+Receive text and email communication and are able to submit username that is persisted in DB
+
+
+Iteration 2:
+
+Hard coded test admin accounts implemented for allowing creation of new test hunts and assigning users to these hunts to test they are able to be added properly.
+
+Server Side:
+Admin privileges assigned somehow
+Hunt creation
+Persisting hunt details, including users added
+
+Client side:
+Inputting received access code into URL
+Some kind of confirmation that user has successfully joined hunt
+
+
+Iteration 3:
+
+Adding task structure to server and implementing logic to allow for location services, QR, and text communication from client.
+
+
+Sever Side:
+Add task – Generate Lat/Long, QR, and Text
+
+Client Side:
+Posting one of these fields back to the server to check against task and confirm completion
+
+
+Iteration 4: 
+
+Implement basic map that updates as a user completes tasks
+
+Server Side: 
+As user completes a task, generate an updated map marking that task’s location as completed
+
+Client Side:
+Receive and display updated map
