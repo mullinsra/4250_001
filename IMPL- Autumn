@@ -1,3 +1,6 @@
+WCK- Overall, very good job. The point of the exercise was to think the problem out before coding it. To take time to understand the requirements 
+by doing a design, to define test cases and test data, etc. You did all that. AND you caught the test case I normally trip people up with (see bottom of file)
+
 In psuedo code, string tasks
 
 Design Stage
@@ -36,6 +39,6 @@ If a user adds an unknown variable, the program won't be able to identify it as 
 If a user puts in the actually ASCII variable will the program be able to identify it or do you need to define every ASCII character to its individual number 0-255
 Can a user put more than one character on each line
 Or does each character need to inputed individually
-What will the program do if there is a tie between four top characters, will it print all of the characters?
+What will the program do if there is a tie between four top characters, will it print all of the characters?   WCK- GREAT catch!!
 Ensure that the system understands every ASCII character and can read them
-Ensure that the program is user friendly and can be read easily to enter data or files
+Ensure that the program is user friendly and can be read easily to enter data or files        WCK- "user friendly" is hard to prove

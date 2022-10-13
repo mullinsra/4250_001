@@ -1,3 +1,9 @@
+WCK- this is the kind of submission I was looking for. It is a bit overkill but the point was to demonstrate certain good practices such as taking time to 
+understand the requirements, come up with a design, document code with meaningful variable names and comments. A few items below prefixed with WCK-
+I don't see test cases or test data but since you didn't finish the code, I'm guessing that time was the issue. But, what happens if I pass in a null/empty string
+the user input. You tested for the file to exist but what if it is protected and you can't access it? What if it is empty?
+Overall, very nice job. 
+
 ##########################################################################################################################################################
 Implementation Exercise
 
@@ -43,7 +49,9 @@ Run loop using .Count function for each char
 	if count is 0 append to no occurrence list
 	else if count > 0 append to count list
 
-Sort count list and print top three char
+Sort count list and print top three char                        WCK- what if there is a tie involving more than the first 3 (count is 4,3,2,2,2,2,1,...)
+                                                                     if you only print out the first 3, is this meeting the requirements
+								     
 
 Print no occurrence list size
 
@@ -61,7 +69,10 @@ class Charset:
 #Prompt user for input
 inputSuccess = 1
 
-while inputSuccess > 0:
+while inputSuccess > 0:    
+
+WCK- perhaps it is my ignorance of python, but in the languages I know, using break and continue to manage the loop is not considered good practice.
+     why not just let control fall to the end and allow the conditional expression determine if you break or continue
 
     consoleOrFile = input("Enter string from Terminal or File? (Enter T or F)\n")
 
@@ -75,12 +86,12 @@ while inputSuccess > 0:
     elif consoleOrFile == "F":
         filePath = input("\nEnter full file path:\n")
         #check if it's a valid filepath
-        if os.path.exists(filePath) == True:
+        if os.path.exists(filePath) == True:            WCK- good validation!!
             workingString = pd.read_csv(filePath)
             inputSuccess = 0
             break
         #if not send em back to the beginning
-        elif os.path.exists(filePath) == False:
+        elif os.path.exists(filePath) == False:             WCK- restate the condition that causes elif to run? why not just have "else"
             print("\nThe filepath was invalid or the file does not exist\n\n")
             continue
 

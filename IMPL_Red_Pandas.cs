@@ -1,3 +1,9 @@
+WCK - Overall, very good job. The point of the exercise was to think the problem out before coding it. To take time to understand the requirements 
+by doing a design, to define test cases and test data, etc. You did some of this. Maybe you ran out of time before you got to test cases and test data.
+
+WCK - comments below with WCK- 
+	
+
 /***
  * 
 
@@ -9,7 +15,7 @@ Ethan Morgan
 
 Recursion
 
-Definition of Done - break out of the loop and print one number. (exceptions for max int, not int, and null)
+Definition of Done - break out of the loop and print one number. (exceptions for max int, not int, and null)    WCK- the code excludes negatives too.
 
 Flow
 	-set variable boolean 
@@ -71,7 +77,7 @@ namespace Da_Red_Pandas
             var num1_check = " n";                                                                      //initial variables taken in to check
             var num2_check = " n";                                                                      //initial variables taken in to check
             int max = int.MaxValue;                                                                     //check for max number
-            int userNum = 0;
+            int userNum = 0;                WCK- good job; meaningful names (mostly) and comments and initialized!!
 
 
             line();
@@ -82,7 +88,7 @@ namespace Da_Red_Pandas
             line();
             while(keepGoing)
             {
-                //if user wants to add more than one set of numbers then reset the inital while loop values
+                //if user wants to add more than one set of numbers then reset the inital while loop values           WCK- NICE!
                 start = false;
                 finish = true;
 
@@ -105,6 +111,8 @@ namespace Da_Red_Pandas
 
                     //condition to get out of while loop
                     if (intCheck1 && intCheck2 && num1 < max && num2 < max && num1 >= 0 && num2 >= 0)
+			     WCK- when you do multiple compounded conditions use Parens to group them so it is easier to read
+				   e.g.   (intCheck1 && intCheck2 && (num1 < max) && (num2 < max) && (num1 >= 0) && (num2 >= 0) )
 
                         start = true;
                     //exception
@@ -117,7 +125,7 @@ namespace Da_Red_Pandas
                 }
 
                 //after loop add nums
-                int result = num1 + num2;
+                int result = num1 + num2;                    WCK- what if num1 and num2 are both equal to (MaxInt - 5) ???
 
                 IntRecusion(result);
 
@@ -146,15 +154,15 @@ namespace Da_Red_Pandas
         }
 
 
-        /// <summary>
+        /// <summary>                     WCK- GOOD!
         /// method where the recursion is performed takes result int as input
-        /// casts ints to string, pulls of the lest significant digit casts back to int, and adds 
+        /// casts ints to string, pulls of the lest significant digit casts back to int, and adds           WCK- I would have used modulo
         /// two ints.  Once this is done checks to see if int is 1 digit if not recursion, if so break.
         /// </summary>
-        /// <param name="num1"></param>
+        /// <param name="num1"></param>                               WCK- oops. comments are not current with implementation
         /// <param name="num2"></param>
         /// <returns></returns>
-        static int IntRecusion(int result)
+        static int IntRecusion(int result)                             WCK- is it common practice for C# method names to start with capital letters?
         {
             //Converting the parameter into a string so it is easier to manipulate later in the code.
             string temp = Convert.ToString(result);
@@ -171,10 +179,10 @@ namespace Da_Red_Pandas
 
             //If the result has more than 1 digit then repeat the process recursively.
             if (result > 9)
-                IntRecusion(result);
+                IntRecusion(result);                 WCK- shouldn't this be "result = IntRecursion(result);"; otherwise, I don't think this works.
 
             //Once final result is received print it out.
-            if (result < 10)
+            if (result < 10)                             WCK- I'm not sure you need this if statement; look at the prior one.
                 Console.WriteLine("\nResult: " + result);
 
             return result;

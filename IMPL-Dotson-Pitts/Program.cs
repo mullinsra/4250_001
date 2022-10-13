@@ -1,4 +1,13 @@
-﻿/*
+WCK-  The point of the exercise was to think the problem out before coding it. To take time to understand the requirements 
+by doing a design, to define test cases and test data, etc. You did some of these.
+    
+WCK- some concerns about the design.
+    4556465 + 57658 = 4614123, 461412 + 3 = 461412 (the last one is not true; did you forget to continue your thought?)
+    there is no test cases or discussion of boundary conditions or constraints on the inputs.
+
+    Additional comments below prefixed with WCK-
+
+/*
     Team Name: The Three... Two Stooges
     Actual Names: Daniel Dotson, Timothy Pitts
     Class CSCI 4250_001
@@ -13,7 +22,9 @@ public class Program
 
     public static void Main()
     {
-        int x = 0;
+        int x = 0;                        WCK- good, you initialized it. But is "x" the best descriptive name you can have here?
+                                              I would have named it "endProgram = false" and switchCase returns false if they choose 2 or returns true otherwise
+                                                  then it reads while (!endProgram)
         do
         {   
             //get users main menu choice as a string.
@@ -54,7 +65,9 @@ public class Program
                 //This shows that the user has put in invalid options. The Main method is called to 
                 //restart the program. 
                 Console.WriteLine("not a valid option");
-                Main();
+                Main();                             WCK- I think this is flawed logic. You should not recursively call Main. And by returning 0
+                                                           I'm pretty you end up calling mainMenu again which is okay if you haven't already called Main again.
+                                                        just return zero here
                 return 0;
         }
 
