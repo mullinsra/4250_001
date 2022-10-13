@@ -1,0 +1,28 @@
+Jackson Coffey
+Tanner Collins
+Dylan Shaffer
+
+Iteration 1
+  - Designing the server
+      * Player data persists on the server
+      * List of tasks persists on the server
+  - Scaffold a blank webpage
+  - Setup manual text messaging and email
+  
+  Explanation: In iteration 1 the primary purpose is to layout the foundation of the back-end and the front-end as well as the texting and email.
+  
+  Iteration 2
+  - Design UI
+    * Create various pages (login, tasks, account)
+  - Connect front-end to back-end to display on pages
+    * This will allows users to login
+    * Display task information
+    * Manage account settings
+    
+    Explanation: In iteration 2 the purpose is to connect the front-end and back-end to build upon the foundation. This can allow us to test the functionality of the pages.
+    
+    Does the length of your iteration factor into your choices? Explain.    
+        Yes, the iteration length is determined by what parts we are trying to separate and the extent of how we're building them out. Our methodology for how we are separating out iterations is based on dependencies.
+      
+     Does the size of your team factor into your choices? Explain.
+     Yes, because based on your team size there is only so much that can be done at once. It can be easier to build out smaller things and within each iteration build upon them. 
