@@ -1,0 +1,73 @@
+Names: Autumn, Adelaide, Janine, Hannah
+
+Rationale: We have started breaking this down into stages by implementing pieces of each of the data model, server, and client interface (the three main feature groups
+we picked out of the requirements) so we started in iteration 1 with the "bare bones" scaffolding of each so we would have the framework to start implementing everything.
+In iteration 2 we build off of this by starting to fill out the data model and profiles as well as verifying the addition of data is displayed/replicated on the server
+and client interface (ie if a user profile exists, they should be able to see their profile in the app when the open it). We continue this adding functionality in each
+iteration, building each main piece out "simultaneously" so that we have less conflicts than we might have if we built out all the functionality for one thing and tried
+to connect the pieces at the end. This way we can make sure they work together at each stage and if something breaks we don't have to start completely over on something
+
+Foundational Pieces:
+- data model
+- server
+- client interface
+- admin interface (iteration 3)
+
+
+Iteration 1:
+- server
+  - scaffolding
+    - hosting
+    - OS/language
+    - framework
+    - etc...
+- client interface
+  - set up empty webpage
+  - connect to data model
+  - connect to server
+
+- data model
+  - user profile
+  - task list
+  - hunt profile
+  - admin profile
+  - establish table connections
+
+
+Iteration 2:
+- server
+  - check connections
+  - grant permissions to admin (ie, create update games)
+  
+- client interface
+  - login functionality/prompt
+  - display user profile
+  - display task list
+  - display hunt data
+  
+- data model
+  - populate empty tables
+    - admin profile tables
+    - user profile table
+    - hunt 
+    - taks list
+    
+    
+    
+ Iteration 3: (create admin interface)
+ - data model
+  - add completion status table
+ - client interface
+  - user interaction with tasks (implement)
+  - access code validation
+ - server
+  - send access code and url
+  - send congrats to users and leaderboard
+  - save game status & user profiles
+  
+  
+  
+ Iteration 4:
+ - location services
+ - qr code
+ - user update profile table
