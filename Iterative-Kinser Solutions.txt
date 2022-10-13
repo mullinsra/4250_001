@@ -1,0 +1,53 @@
+Team Name: Kinser Solutions
+
+Team Members: Philip Gaver, Timothy Pitts, Daniel Dotson, Isaiah Jayne
+
+Iterative exercise
+
+Date: 10/13/2022
+
+Iteration length: 1 week. We based this off the time of the sprints for the group project at the end of the semester in this classes. 
+
+Iteration 1: Build admin and player objects and determine how to store them. CSV file?
+	
+	Reasons: There's no reason to work on a front end if there's no backend logic. We will need the user objects
+	to build functionality in the game that tracks user project. We will need admin users to work on a user 
+	management system later on. 
+	
+	Requirements: Determine required properties for players and admins.
+	Design: Build class UML diagrams with properties from requirements.
+	Implementation: Code it.
+	Testing: Develop test cases for admin and player objects. Be able to add them from a CLI interface. 
+	Release: I have no idea how you release code to production. Commit to main branch?
+	Maintenance: 
+
+Iteration 2: Build task objects. Build game objects. 
+	
+	Reason: The game/hunt contains many tasks. So the task object needs to be built first. The game will manage 
+	user progress, so it is important to have the user objects in place. 
+
+	Requirements: Find requirements for games and define tasks.
+	Design: Build class UML diagrams with properties from requirements.
+	Implementation: Code it. Determine way to save tasks to csv. Determine how game will manage user progress.
+	Testing: Be able to manage tasks and start a game. Be able to interact with a game through CLI. Start a game in CLI,
+	and see if the user progress changes as codes are input. 
+	Release: I have no idea how you release code to production. Commit to main branch?
+	Maintenance: 
+ 
+Iteration 3: Work on user management system. 
+
+	Reasons: admin must be able to manage users before invitations can be sent out and game started. 
+
+	Work on the user management systems. 
+	Requirements: Admin priviledges. What changes does the admin need to be able to do. Login system required.
+	Design: Create a flow chart as well as any class UML's for classes that define game and user interaction. 
+	Implementation: Create some sort of login system. Try to implement hash security. 
+	Testing: Create multiple users. Test logins. Test resetting password. Test admin priviledges
+	Release: Commit to main branch.
+	Maintenance: 
+
+Iteration 4: Work on GUI.
+
+	Reasons: GUI will be defined by the server futionalities. 
+	
+
