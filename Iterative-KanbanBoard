@@ -1,5 +1,7 @@
 Names: Autumn, Adelaide, Janine, Hannah
 
+Iteration timeline: 1 week to a week and 1/2
+
 Rationale: We have started breaking this down into stages by implementing pieces of each of the data model, server, and client interface (the three main feature groups
 we picked out of the requirements) so we started in iteration 1 with the "bare bones" scaffolding of each so we would have the framework to start implementing everything.
 In iteration 2 we build off of this by starting to fill out the data model and profiles as well as verifying the addition of data is displayed/replicated on the server
