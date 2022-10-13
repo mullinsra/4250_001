@@ -8,8 +8,9 @@ In iteration 2 we build off of this by starting to fill out the data model and p
 and client interface (ie if a user profile exists, they should be able to see their profile in the app when the open it). We continue this adding functionality in each
 iteration, building each main piece out "simultaneously" so that we have less conflicts than we might have if we built out all the functionality for one thing and tried
 to connect the pieces at the end. This way we can make sure they work together at each stage and if something breaks we don't have to start completely over on something
+WCK- I really like the above rationale. 
 
-Foundational Pieces:
+Foundational Pieces:  WCK- these are the core elements of a MVC
 - data model
 - server
 - client interface
@@ -39,7 +40,7 @@ Iteration 1:
 Iteration 2:
 - server
   - check connections
-  - grant permissions to admin (ie, create update games)
+  - grant permissions to admin (ie, create update games) WCK- if the admin console is only running on the server, there is no need initially to have permissions. If you can get to the server then you are an admin.
   
 - client interface
   - login functionality/prompt
