@@ -1,0 +1,28 @@
+Stephen Maurer, Aisara Imangaliyeva, Shaun Bennett, Alex Byars
+FIRST ITERATION
+Database/ Server: Storing Basic Player Information(Account username/Password/Email/Phone number/Photo/Team) & Admin Account(Account username/Password) & Unique Verification codes attached to each player.
+Webpage: Basic Signup page, Admin UI for account verification.
+Phone App: Basic Account Setup Gui
+Texting/Email: Access Code, Url, and SMS text sent out.
+Reasoning:
+This is done to provide a basic functionality test for storing account information.
+We did this to test basic setup of user and admin accounts to make sure that the information was stored correctly in the database.
+
+SECOND ITERATION
+
+Database/ Server: Game Status(Task List status for each player, Start and End Date) & Task List(decoded QR Code Entry)
+Webpage: Player UI for Game Status, Admin UI for game info
+Phone App: Player UI for Game Status, Decoded QR Code Entry
+Reasoning:
+This is done to provide a basic functionality testing for Game with completing task.
+This Iteration was created this way to setup to store the game tracking information to record player task list and other game information such as the play dates.
+THIRD ITERATION
+Database/ Server: Task List(QR Code and Location verification for task list)
+Webpage: Map with GPS, Admin UI for Game Points and QR generation.
+Phone App: Map with GPS, QR Code Scanning
+Reasoning:
+This is done to provide a basic functionality testing for Game with QR code scanning and GPS.
+This iteration was focused on Game functionality with QR code scanning and GPS map and verification when submitting QR codes.
+
+
+
