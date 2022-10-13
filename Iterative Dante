@@ -7,7 +7,7 @@ Technologies to implement:
 
 
 Iteration 1:
-
+WCK- your summary/rationale for each iteration looks like Sprint Goals in Scrum (did you peek ahead?).
 Implementation of the email and SMS interfacing with user. This can be populated with dummy data that will be replaced with the proper access code and message in a a later release.
 
 Server Side: 
@@ -24,7 +24,8 @@ Iteration 2:
 Hard coded test admin accounts implemented for allowing creation of new test hunts and assigning users to these hunts to test they are able to be added properly.
 
 Server Side:
-Admin privileges assigned somehow
+Admin privileges assigned somehow           WCK- if admin console is only on the server, no need for privileges; they can only run the console if they can get into the server;
+
 Hunt creation
 Persisting hunt details, including users added
 
