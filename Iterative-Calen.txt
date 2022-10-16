@@ -2,6 +2,7 @@ Calen Cummings
 
 BucHunt Iteration Plan
 
+WCK- the first iteration is almost the entire PID so this is more like waterfall with some follow on upgrades. Your scope of the 3 iterations exceeds this semester's scope. Your rationale for the first iteration is exactly on point but you could accomplish this with much less functionality. Think incrementally. Which features would you implement first in your first iteration. That might be enough. I would have a single thread from the UI to the server to my persistent store (simply displaying the task list for the current hunt on a URL; no user, no admin, just basic static web page); this is a MVP (minimum viable product) from which you can add functionality.
 Iteration 1:
 
 - Setup servers for automated email/SMS messaging for hunt invitations and codes
