@@ -1,3 +1,6 @@
+WCK - overall, a good job. Your comments explain what was happening. I found a few minor issues and some missing test cases (but you did have some)
+      more comments below prefixed with WCK-
+
 // Take two numbers in from the user (a human) and add them together then separate the least significant digit
 // and add it the remaining digits and so on until you have a single digit answer
 
@@ -8,16 +11,16 @@
 
 
 bool notNumber = true
-int num1
+int num1                  WCK- it is always good practice to initialize variables; even if the system does it for you or you are sure you don't use it till set
 int num2
 
 // Read in the first number and make sure that it's a valid integer
-print "Please enter a first number, as a digit"
+print "Please enter a first number, as a digit"                            WCK- this prompt implies a single digit "as a digit", not what you wanted right?
 while (notNumber)		// Loop will continue until input is a valid int
 	string input = read()
 	
 	if (input.TryParse() not a valid int)
-		print "That is not a digit."
+		print "That is not a digit."      WCK- "a digit" or "an integer value"
 	else
 		num1 = input
 		notNumber = false
@@ -40,6 +43,7 @@ try
 catch (RecursiveDepthException)
 	print "The two inputs cannot be processed."
 
+        WCK - good comments for funct but poor naming; name should be descriptive (e.g. recursiveFunction); No need to abbreviate names, doesn't save space
 
 // This function takes in two integers, adds them together, and if the result isn't a single digit
 // then separates the result into least significant digit and remaining digit and recursively calls
@@ -53,8 +57,10 @@ int funct(int num1, int num2, int depth = 0)
 	if (depth > 10 || depth < 0)
 		throw RecursiveDepthException
 
-	int result = num1 + num2
+	int result = num1 + num2                   WCK- what if num1 and num2 are maxInt; you said earlier overflow is okay but you won't exit gracefully
+	                                                
 	
+	                                           WCK- clever. I didn't think of this as the exit condition
 	if ((result / 10) == 0)		// If the result / 10 is equal to 0, then result is a single digit, so we're done
 		return result
 	else				// Otherwise we need to call the function again
@@ -62,7 +68,8 @@ int funct(int num1, int num2, int depth = 0)
 		int MSDs = result / 10	// Dividing by 10 leaves the most significant digits
 		
 		return funct(LSD, MSDs, depth + 1)
-
+WCK- the only issue I have with the above logic flow is that you have two return statements; 
+     it better practice to only have one. I see a way to do this, do you?
 
 
 // UNIT TESTING
@@ -72,6 +79,8 @@ assert funct(0, 0, 0) returns 0
 assert funct(1, -1, 0) returns 0
 assert funct(1, 1, 0) returns 2
 assert funct(10, 10, 0) returns 2
-assert funct(123, 123, 0) returns 3
+assert funct(123, 123, 0) returns 3  
 assert funct(123456, 123456, 10) throws RecursiveDepthException
 assert funct(-24, 51, 0) returns 9
+
+WCK- missing some test cases; (-123,-123), (maxInt,maxInt), (-maxInt, -maxInt), (maxInt,1), (maxInt,0), etc.

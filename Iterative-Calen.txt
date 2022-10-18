@@ -1,0 +1,29 @@
+Calen Cummings
+
+BucHunt Iteration Plan
+
+WCK- the first iteration is almost the entire PID so this is more like waterfall with some follow on upgrades. Your scope of the 3 iterations exceeds this semester's scope. Your rationale for the first iteration is exactly on point but you could accomplish this with much less functionality. Think incrementally. Which features would you implement first in your first iteration. That might be enough. I would have a single thread from the UI to the server to my persistent store (simply displaying the task list for the current hunt on a URL; no user, no admin, just basic static web page); this is a MVP (minimum viable product) from which you can add functionality.
+Iteration 1:
+
+- Setup servers for automated email/SMS messaging for hunt invitations and codes
+- Build database tables to store persistent player information (email, phone number)
+- Implement baseline/standard hunt that is always active
+- Create scaffold of web page that users can access the single hunt through
+- Create checklist feature to mark off visited locations
+- Collect user stories to incorporate desired functions in following iterations
+* With this first iteration, we are addressing the scope outlined in the BucHunt Iteration 1 PID and building a simple and expandable first iteration that offers enough functionality for users to get a taste of the intended finished product and provide feedback on what they would like to see implemented. By starting light with the server workload, we can make sure that incrementally adding more tables as features like locations and increased active/inactive hunts does not overload the server, and in such a case we can easily identify which function is causing the issue. This iteration would take some time as it would involve setting up the servers, a simple database, API setup, and designing the web page. Although this may take some time and a sizable team, it would be a strong platform to start with.
+
+Iteration 2:
+
+- Add tables to store multiple hunts (locations, access codes, associated URL) and functionality to make   hunts active/inactive
+- Establish admin accounts/privileges to allow creation of hunts
+- Allow users to participate in multiple active hunts
+- Notify users when a joined hunt becomes active
+* In this iteration, we add the functionality for multiple hunts, notifications for when hunts are live, and allowing the creation and joining of multiple hunts. This expands on the functionality from the first iteration without adding too much at once and posing a risk of creating too many risk points for the server. Being able to create hunts and join more than one hunt would hit on features desired by users and admins alike, addressing feedback from user stories in the previous iteration. A smaller overall team would be needed for this iteration since there is less initial setup, but testing and requirements analysis takes more time as we add more features and contemplate how user feedback can be incorporated into this iteration.
+
+Iteration 3:
+
+- Add image processing to match pictures of locations taken by users to images of the location to verify they have found one of the locations
+- Add GPS tracking functionality to give users an idea of how close they are to the target location or if they are headed in the right direction
+- Add real-time leaderboard for hunt so users can see who is ahead in their hunt
+* This iteration would take a similar amount of time to the first just because of the features being added and the testing that would be required. For image processing to work, we would need to have associated images stored for each location and have a program that could determine key features of a location to be able to match pictures. GPS tracking could be troublesome depending on the implementation and should allow users to opt out if they want more of a challenge or prefer to not share their precise location data. The leaderboard adds a more fun and competitive spirit to the hunts and allows users to identify if they are winning or where they stand in the current hunt. This iteration would require a large development and testing team to make sure features work properly at least most of the time to prevent user frustration, with image processing being the biggest challenge in that regard.

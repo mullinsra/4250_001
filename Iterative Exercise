@@ -1,0 +1,7 @@
+divide the BucHunt requirements up into Iterations of incremental functionality.
+You can’t build everything all at once, so what do you build first and what do you build last? The data model? The server logic? The UI (without connections)? Do you go with whole user stories? Do you go with the riskiest feature first? 
+There is no single right answer so explain the reasons why you pick what you pick. 
+Does the length of your iterations factor into your choices? Explain. 
+Does the size of your team factor into your choices? Explain.
+As usual, I’m more interested in your explanations than if you get the full list planned out. This activity is very similar to Sprint Planning.
+Submit your plan to GitHub as a text file (not a Word file please). 

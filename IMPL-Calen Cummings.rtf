@@ -1,3 +1,7 @@
+WCK- so far you are the only one I've seen not limit it to integers. I'm impressed. 
+Overall, very good job. The point of the exercise was to think the problem out before coding it. To take time to understand the requirements 
+by doing a design, to define test cases and test data, etc. You did all that. 
+
 {\rtf1\ansi\ansicpg1252\cocoartf2639
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
 {\colortbl;\red255\green255\blue255;}
@@ -24,14 +28,14 @@ Prompt user input \'97> read user input \'97> sanitize/check for compliance, re-
 Devil\'92s Advocate/Hazards:\
 Need to consider stack overflow exceptions\
 User input can be bad/incorrect format resulting in read/casting error\
-If easy or edge cases don\'92t work then almost impossible to verify that middle cases do\
+If easy or edge cases don\'92t work then almost impossible to verify that middle cases do\               WCK- GOOD JOB!!
 Removal of the least significant digit could result in rounding errors if not done properly\
-How big or small of a number will work? How precise? Negatives?\
+How big or small of a number will work? How precise? Negatives?\                                         WCK- Another good catch
 Will the prompt for input infinitely loop if not handled/exited properly?\
-Does having signed input limit the potential of the program by introducing a large range of negative values?\
+Does having signed input limit the potential of the program by introducing a large range of negative values?\    WCK- good.
 \
 Unit Testing/Test Set:\
-Should include 0 and a large integer like 123,456\
+Should include 0 and a large integer like 123,456\        WCK- i'd go with (MaxInt, MaxInt), (MaxInt,0), (-MaxInt,0),(0,0), (123,123),(-123,-123), (-MaxInt, -MaxInt)
 Two large integers like 123,456,789 and 987,654,321\
 Negative numbers -345 and -1,111\
 Decimal numbers 0.123456 and 0.123\

@@ -1,3 +1,6 @@
+WCK _ Overall, very good job. The point of the exercise was to think the problem out before coding it. To take time to understand the requirements 
+by doing a design, to define test cases and test data, etc. You did all that. AND you caught the test case I normally trip people up with (see bottom of file)
+
 Take in a string (from a user or a file), compute the total number of occurrences of each character in the ASCII set. 
 Print out the top three characters (with the most occurrences). Print out how many characters in the ASCII set you didn’t detect. 
 Then print out the string in reverse order.
@@ -23,7 +26,7 @@ TotalOccurences:
 Takes UserInput
 Converts UserInput into a TotalOccurences
 Sorts TotalOccurences into the high to low of the amount of the occurences
-Gets the top three occurrences and puts into list TopThree
+Gets the top three occurrences and puts into list TopThree                 
 Prints TopThree
 
 //ASCIMissing: This method will need to use the TotalOccurences to get all of the occurrences from the 
@@ -44,7 +47,7 @@ UserInput:
 
 TotallOccurences:
 // TotalOccurences:  Will need to test to see what happens when there are more then top 3 characters 
-// have the same number of characters. If that happens, have it display the extra ASCI characters next to 
+// have the same number of characters. If that happens, have it display the extra ASCI characters next to   WCK - NICE CATCH.
 // each other on the print list for the top three characters
 
 ASCIMissing:

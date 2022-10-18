@@ -1,0 +1,96 @@
+WCK- overall, these are good. feedback inline below with WCK- prefix.
+
+
+Battleship Test case
+
+1) Test that a missile is launched using either the space key or right-click on the mouse.
+	<do this by launching a missile both ways>
+
+2) Test that there are never more than 5 missiles on the screen at once
+	<Keep launching missiles until it stops you and ensures there are only 5>
+
+3) Test that a missile is deactivated when it is no longer on screen.
+	<launch a missile near the edge of the screen and see if it comes back on screen once it is off>
+	WCK- all missiles are launched from the same location so you can't launch near edge of the screen.
+	you can test this requirment by launching 5 missiles, keeping hitting spacebar repeatedly, once the first 
+	missile goes off the screen a new missile will be launched but not before.
+
+4) Test that all missiles travel at the same speed
+	<launch a few missiles and count how long each one is on the screen>
+
+5) Test that the missiles all launch from the bottom center and that all travel upwards>
+	<try to manipulate the launcher to a different location and ensure it only works from the bottom.>
+	<change screen size and see if it still launches from the bottom center>
+	<mirror screen and see if it stays bottom center.>
+WCK- these are very good. 
+
+6) Test that when a missile hits a ship is detected.
+	<change location of hit ships to make sure it detects a hit on all screen locations.>
+	<see if a near miss counts as a hit>
+WCK- I reviewed yours last (just the way it happened) and you are the only one I remember that 
+took a near miss into consideratin. Excellent.
+
+
+7) Test that an explosion occurs when the ship is hit
+	<make sure the explosion only occurs at a ship site.>
+	<see if there is an explosion when missiles collide>
+
+8) Test to make sure the missile is removed after ship contact
+	<Collide missile with the ship and see ship and missile be removed>
+
+9) Test that every hit is counted
+	<Launch missiles to make hits and count each contact with ships and make sure counter matches up.>
+
+10) Test that a ship is launched when there a no active ships
+	<remove all ships and watch the system add a single ship.>
+	WCK- can't remove all ships without changing code. But you could change the config rate to 
+	be 0%, which should cause no ships to be launched except this requirement should force one
+	to be launched. thus you will have one and only one and always one ship on the screen.
+
+11) Test that there can be many different types of ships.
+	<launch different types of ships and fire missiles to show they can all be hit.>
+	<shrink screen size and test that all ships still work.>
+
+12) Test that the right ship image appears for each ship
+	<place each ship and check to see if there are different images.>
+	<then test each ship on its own to see if the right image appears.> WCK- PERFECT
+
+13) Test that a ship will be launched at default 30% of the time
+	<watch time and see that ships are launched at the 30% mark of time.>
+	WCK- the test for this is covered with some other by changing the rate to 0%, 100%, and then
+	leave it blank (the default);
+
+14) Test that the system randomly chooses from all ship types at an equal chance of time.
+	<write down each ship that is randomly sent and calculate the probability to see if it matches equally.>
+
+15) Test that there are never more than 10 ships on the screen
+	<try to launch a ship to see if more than 10 can show up.>
+	WCK- this is where you set the config rate to 100%, a cluster of ships should appear on the
+	left and right; and no more than 10 total until they start to go off the screen and then 
+	more will appear.
+
+16) Test that the system randomly chooses ship location and direction
+	<launch 10 ships and see if they are all placed in a different location.>
+	<launch 10 ships and see if they can be launched from right to left or left to right.>
+
+17) Test that the ship is launched from the top two-thirds of the screen on the right.
+	<Change screen size and see if the ships are alunched from the same direction.>
+
+18) Test the speed of the ship when launched based on type
+	<see if each ship comes in at a different speed>
+	<send a small ship and watch it move fast>
+	<Send a large ship and watch it move slow>
+
+19) Test the direction of the ship based on which side it is launched.
+	<if it is launched from the left, it should face the right.>
+	<if it is launched from the right, it should face the left.>
+ 
+20) Test that the ships are removed once off screen.
+	<see if the ship comes back on screen after it passes by>
+	<change screen size and see if it affects the ships active time.>
+
+21) Test the ending of the game.
+	<hit 10 ships and see if game ends>
+	<click left button on mouse and see if game ends>
+	<click esc button and see if game ends>
+	<Wait for 5 minutes with no activity and see if the game ends>
