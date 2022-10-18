@@ -133,3 +133,22 @@ Dylan Shaffer
 	Can have failure if hitting outer border
 	Can have different modes (sandbox, limited ink, etc.)
 	Can have customization options for ball and ink (different colors, new shapes, etc.)
+========
+Hunter Gilliam
+	Ball bounce requirements
+	User input/drawing
+	ball	
+	ball bounces
+	bounds of the project/screen
+	ball bounces off newly formed objects made by the user
+	mouse control
+	some sort of way to start/end
+	is this a game?- is there some kind of objective?- scoring?
+	How big is the ball?- How fast should the ball move?- How long should the game last(ifgame)
+	what operating system?- budget? - who is this program for?
+	Is this already a created thing?- If so what do we need to change to make this one different?
+
+
+In this weeks status report discuss how we scoped out the work last thursday in order to complete it in time.
+	We broke down and focused on each task one by one in order to more efficiently complete the assignment.
+	
