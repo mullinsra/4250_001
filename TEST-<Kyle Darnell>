@@ -1,0 +1,50 @@
+The solution must support missiles launched by the user, using either the spacebar or the right-mouse button.
+-	Press the spacebar and see if a missile is launched
+-	Click the right mouse button and see if a missile is launched
+
+The solution must limit the number of missiles on screen at one time to 5.
+-	Click right-mouse button 3 times, then press spacebar 3 times and observe if more than 5 missiles stay on screen
+
+
+The solution must remove missiles from being active if they go off screen.
+-	Launch the missile toward the edge of the screen and see if it is removed from being active
+-	Launch the missile toward the four corners of the screen and see if it is removed from being active
+-	Resize the window and see if the game adjusts to the new borders
+
+The solution must maintain a constant speed for all launched missiles
+-	Launch multiple missiles at the same target from the same launch point. Observe if the missiles reach the target at the same time.
+-	Launch one missile at a far target and on at a close target and observe if the missile aimed at the far target is moving noticeably faster to compensate.
+
+game where the player shoots a missile at ships passing across the
+The solution must launch all missiles from the center of the bottom of the screen.
+-	Launch various missiles at different targets from left to right on the screen and see if the missile is launched from the center
+-	Resize the window and see if the missile still launches from the middle
+-	Move mouse curser from left to right and see if the missile still launches from the middle
+All launched missiles must maintain a vertical direction form the launch position
+-	Aim the missile at close targets to the left or right of the launch position and see if the missile curves to hit the target
+
+The solution must detect when a missile hits a ship and display an explosion at the point of contact
+-	Launch a missile at a ship and see if an explosion is displayed.
+-	Launch multiple missiles at multiple points on a ship to see if the explosion changes position
+The solution must remove the missile and ship after the missile hits the ship, as well as keep a count of hits
+-	Observe if the missile is still on screen after hitting the ship
+-	If a ship is “sunk”, observe if it is removed from the screen
+
+When no ships are on screen, the solution must start a launch
+-	Sink all ships on screen and see if the game launched new ships
+The system must support multiple ship types based on a configurable value and display the correct image for the ship.
+-	Set the configuration to multiple values and observe if the game launches different types of ships
+-	Observe if the ship image matches
+Solution must give all types of ships an equal chance of being chosen
+-	Start multiple launches and observe if the one ship is chosen more often than others
+Displayed ships must be limited to 10 at one time
+-	Observe if more than 10 ships are displayed at once
+Ship must be randomly launched from the left or right of the screen, within the two thirds of the screen
+-	Start multiple launches and observe if one side is favored more often in launches
+-	Launch missiles at the lower third of the screen and see if there is a hit.
+Ships must have different speeds depending on the type
+-	Observe speeds of various ships after launch
+
+
+
+
